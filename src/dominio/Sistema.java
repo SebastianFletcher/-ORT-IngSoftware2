@@ -126,8 +126,8 @@ public final class Sistema implements Serializable {
 
     public enum Paises {
         Argentina, Bolivia, Brasil, Chile, Colombia, CostaRica, Cuba, Ecuador, ElSalvador,
-        GuayanaFrancesa, Granada, Guatemala, Guayana, Haití, Honduras, Jamaica,
-        México, Nicaragua, Paraguay, Panamá, Perú, PuertoRico, RepúblicaDominicana, Surinam, Uruguay, Venezuela;
+        GuayanaFrancesa, Granada, Guatemala, Guayana, Haiti, Honduras, Jamaica,
+        Mexico, Nicaragua, Paraguay, Panama, Peru, PuertoRico, RepublicaDominicana, Surinam, Uruguay, Venezuela;
     }
 
     public enum DiasDeLaSemana {
@@ -153,14 +153,14 @@ public final class Sistema implements Serializable {
         lstNacionalidades.add(Paises.Granada.toString());
         lstNacionalidades.add(Paises.Guatemala.toString());
         lstNacionalidades.add(Paises.Guayana.toString());
-        lstNacionalidades.add(Paises.Haití.toString());
+        lstNacionalidades.add(Paises.Haiti.toString());
         lstNacionalidades.add(Paises.Honduras.toString());
         lstNacionalidades.add(Paises.Jamaica.toString());
-        lstNacionalidades.add(Paises.México.toString());
+        lstNacionalidades.add(Paises.Mexico.toString());
         lstNacionalidades.add(Paises.Nicaragua.toString());
         lstNacionalidades.add(Paises.Paraguay.toString());
-        lstNacionalidades.add(Paises.Panamá.toString());
-        lstNacionalidades.add(Paises.Perú.toString());
+        lstNacionalidades.add(Paises.Panama.toString());
+        lstNacionalidades.add(Paises.Peru.toString());
         lstNacionalidades.add("Puerto Rico");
         lstNacionalidades.add("República Dominicana");
         lstNacionalidades.add(Paises.Surinam.toString());
