@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
+public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
 
     private Sistema sistema;
     private String usuarioSeleccionado;
@@ -1844,7 +1844,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         String nombre = this.txtNombre.getText();
         String tipoAlimento = (String) this.listaTipoAlimentos.getSelectedItem();
         ArrayList<ComposicionAlimento> listaNutrientesConProporcion = nutrientesSeleccionados();
-        if (nombre.equals("") || tipoAlimento.equals("Seleccione...")) {
+        if (nombre.isEmpty() || tipoAlimento.equals("Seleccione...")) {
             this.lblDatosIncorrectos.setVisible(true);
             this.lblDatosIncorrectos2.setVisible(true);
             mostrarErrores(nombre, tipoAlimento);
@@ -1959,7 +1959,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
 
     private void txtNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNombreFocusLost
         String nombreIngresado = txtNombre.getText();
-        if (nombreIngresado.equals("")) {
+        if (nombreIngresado.isEmpty()) {
             lblValidarNombre.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png")));
             lblValidarNombre.setVisible(true);
             this.lblNombreVacio.setVisible(true);
@@ -1988,7 +1988,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
 
     private void listaPlanesPendientesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listaPlanesPendientesValueChanged
         this.usuarioSeleccionado = this.listaPlanesPendientes.getSelectedValue();
-        Usuario usuarioPerfil = (Usuario) sistema.getUsuarioPorNombre(usuarioSeleccionado);
+        Usuario usuarioPerfil = sistema.getUsuarioPorNombre(usuarioSeleccionado);
         this.lblNombreUsuario2.setText(usuarioSeleccionado);
         lblFechaNacimiento.setText(usuarioPerfil.getFechaNacimiento());
         lblFotoDeUsuario.setIcon(usuarioPerfil.getFotoDePerfil());
@@ -2100,7 +2100,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
 
     private void txtNombrePlanFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNombrePlanFocusLost
         String nombrePlanIngresado = this.txtNombrePlan.getText();
-        if (nombrePlanIngresado.equals("")) {
+        if (nombrePlanIngresado.isEmpty()) {
             this.lblValidarNombrePlan.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png")));
             this.lblValidarNombrePlan.setVisible(true);
             this.lblNombrePlanVacio.setVisible(true);
@@ -2124,7 +2124,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         switch (ingestaSeleccionada) {
             case "Desayuno":
                 textoAnterior = this.textDesayuno.getText();
-                if (textoAnterior.equals("")) {
+                if (textoAnterior.isEmpty()) {
                     textoAnterior = alimentoAgregado;
                 } else {
                     textoAnterior += "\n" + alimentoAgregado;
@@ -2133,7 +2133,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
                 break;
             case "Almuerzo":
                 textoAnterior = this.textAlmuerzo.getText();
-                if (textoAnterior.equals("")) {
+                if (textoAnterior.isEmpty()) {
                     textoAnterior = alimentoAgregado;
                 } else {
                     textoAnterior += "\n" + alimentoAgregado;
@@ -2142,7 +2142,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
                 break;
             case "Cena":
                 textoAnterior = this.textCena.getText();
-                if (textoAnterior.equals("")) {
+                if (textoAnterior.isEmpty()) {
                     textoAnterior = alimentoAgregado;
                 } else {
                     textoAnterior += "\n" + alimentoAgregado;
@@ -2193,13 +2193,13 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
 
     private void btnElaborarPlan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElaborarPlan1ActionPerformed
         String nombreDelPlan = this.txtNombrePlan.getText();
-        if (nombreDelPlan.equals("")) {
+        if (nombreDelPlan.isEmpty()) {
             this.lblNombrePlanVacio.setVisible(true);
             this.lblValidarNombrePlan.setVisible(true);
         } else {
             String nombreProfesionalLogueado = sistema.getPersonaLogueada().getNombreCompleto();
             Profesional profesionalLogueado = sistema.getProfesionalPorNombre(nombreProfesionalLogueado);
-            Usuario usuarioPerfil = (Usuario) sistema.getUsuarioPorNombre(usuarioSeleccionado);
+            Usuario usuarioPerfil = sistema.getUsuarioPorNombre(usuarioSeleccionado);
             boolean fueAtendidoElPlan = this.sistema.atenderSolicitudDelPlan(planAlimentacion, profesionalLogueado, usuarioPerfil, nombreDelPlan);
             if (fueAtendidoElPlan) {
                 ocultarPaneles();
@@ -2357,7 +2357,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         ArrayList<ComposicionAlimento> listaRetorno = new ArrayList<>();
         if (checkFibra.isSelected()) {
             String proporcionIngresada = txtFibra.getText();
-            if (!proporcionIngresada.equals("")) {
+            if (!proporcionIngresada.isEmpty()) {
                 float proporcion = Integer.parseInt(proporcionIngresada);
                 ComposicionAlimento nueva = new ComposicionAlimento("Fibras", proporcion);
                 listaRetorno.add(nueva);
@@ -2365,7 +2365,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         }
         if (checkGlucidos.isSelected()) {
             String proporcionIngresada = txtGlucidos.getText();
-            if (!proporcionIngresada.equals("")) {
+            if (!proporcionIngresada.isEmpty()) {
                 float proporcion = Integer.parseInt(proporcionIngresada);
                 ComposicionAlimento nueva = new ComposicionAlimento("Glucidos", proporcion);
                 listaRetorno.add(nueva);
@@ -2373,7 +2373,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         }
         if (checkHidratos.isSelected()) {
             String proporcionIngresada = txtHidratos.getText();
-            if (!proporcionIngresada.equals("")) {
+            if (!proporcionIngresada.isEmpty()) {
                 float proporcion = Integer.parseInt(proporcionIngresada);
                 ComposicionAlimento nueva = new ComposicionAlimento("Hidratos de carbono", proporcion);
                 listaRetorno.add(nueva);
@@ -2381,7 +2381,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         }
         if (checkLipidos.isSelected()) {
             String proporcionIngresada = txtLipidos.getText();
-            if (!proporcionIngresada.equals("")) {
+            if (!proporcionIngresada.isEmpty()) {
                 float proporcion = Integer.parseInt(proporcionIngresada);
                 ComposicionAlimento nueva = new ComposicionAlimento("Lipidos", proporcion);
                 listaRetorno.add(nueva);
@@ -2389,7 +2389,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         }
         if (checkMinerales.isSelected()) {
             String proporcionIngresada = txtMinerales.getText();
-            if (!proporcionIngresada.equals("")) {
+            if (!proporcionIngresada.isEmpty()) {
                 float proporcion = Integer.parseInt(proporcionIngresada);
                 ComposicionAlimento nueva = new ComposicionAlimento("Minerales", proporcion);
                 listaRetorno.add(nueva);
@@ -2397,7 +2397,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         }
         if (checkProteínas.isSelected()) {
             String proporcionIngresada = txtProteínas.getText();
-            if (!proporcionIngresada.equals("")) {
+            if (!proporcionIngresada.isEmpty()) {
                 float proporcion = Integer.parseInt(proporcionIngresada);
                 ComposicionAlimento nueva = new ComposicionAlimento("Proteinas", proporcion);
                 listaRetorno.add(nueva);
@@ -2405,7 +2405,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         }
         if (checkVitaminas.isSelected()) {
             String proporcionIngresada = txtVitaminas.getText();
-            if (!proporcionIngresada.equals("")) {
+            if (!proporcionIngresada.isEmpty()) {
                 float proporcion = Integer.parseInt(proporcionIngresada);
                 ComposicionAlimento nueva = new ComposicionAlimento("Vitaminas", proporcion);
                 listaRetorno.add(nueva);
@@ -2625,7 +2625,7 @@ public final class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
     }
 
     private void mostrarErrores(String nombre, String tipoAlimento) {
-        if (nombre.equals("")) {
+        if (nombre.isEmpty()) {
             this.lblValidarNombre.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png")));
             this.lblValidarNombre.setVisible(true);
             this.lblNombreVacio.setVisible(true);

@@ -2,7 +2,7 @@ package dominio;
 
 import javax.swing.ImageIcon;
 
-public final class Profesional extends Persona {
+public class Profesional extends Persona {
 
     public String tituloProfesional;
     private String fechaGraduacion;

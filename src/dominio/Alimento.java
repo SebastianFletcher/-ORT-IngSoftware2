@@ -2,11 +2,9 @@ package dominio;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Objects;
 import javax.swing.ImageIcon;
-import java.util.Currency;
 
-public final class Alimento implements Serializable {
+public class Alimento implements Serializable {
 
     private String nombre;
     private String tipoAlimento;

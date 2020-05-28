@@ -2,9 +2,8 @@ package dominio;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collections;
 
-public final class Conversacion implements Serializable {
+public class Conversacion implements Serializable {
 
     private ArrayList<InformacionMensaje> listaMensajes;
     public Persona usuario;

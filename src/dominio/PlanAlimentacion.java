@@ -1,10 +1,8 @@
 package dominio;
 
 import java.io.Serializable;
-import java.util.Objects;
-import java.util.Currency;
 
-public final class PlanAlimentacion implements Serializable {
+public class PlanAlimentacion implements Serializable {
 
     private String nombreDelPlan;
     private Usuario usuario;

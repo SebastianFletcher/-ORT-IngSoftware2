@@ -7,11 +7,9 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
-
-import java.util.Currency;
 import javax.swing.ImageIcon;
 
-public final class Sistema implements Serializable {
+public class Sistema implements Serializable {
 
     private ArrayList<Usuario> listaUsuarios;
     private ArrayList<Profesional> listaProfesionales;
@@ -116,27 +114,6 @@ public final class Sistema implements Serializable {
         }
     }
 
-    public enum Preferencias {
-        CarnesRojas, CarnesBlancas, Verduras, Frutas, Harinas;
-    }
-
-    public enum Restricciones {
-        Diabetes, Veganismo, IntoleranciaLactosa, Celiaquia;
-    }
-
-    public enum Paises {
-        Argentina, Bolivia, Brasil, Chile, Colombia, CostaRica, Cuba, Ecuador, ElSalvador,
-        GuayanaFrancesa, Granada, Guatemala, Guayana, Haiti, Honduras, Jamaica,
-        Mexico, Nicaragua, Paraguay, Panama, Peru, PuertoRico, RepublicaDominicana, Surinam, Uruguay, Venezuela;
-    }
-
-    public enum DiasDeLaSemana {
-        Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo;
-    }
-
-    public enum IngestasPorDia {
-        Desayuno, Almuerzo, Cena;
-    }
 
     public ArrayList<String> devolverListaPaises() {
         ArrayList<String> lstNacionalidades = new ArrayList<>();
@@ -256,8 +233,8 @@ public final class Sistema implements Serializable {
             } else {
                 info = new InformacionMensaje(profesional.getNombreCompleto(), usuario.getNombreCompleto(), mensaje);
             }
-            if (listaUsuarios.contains((Usuario) usuario)) {
-                if (listaProfesionales.contains((Profesional) profesional)) {
+            if (listaUsuarios.contains(usuario)) {
+                if (listaProfesionales.contains(profesional)) {
                     ArrayList<InformacionMensaje> listaMensajes = new ArrayList<>();
                     listaMensajes.add(info);
                     Conversacion nuevaConversacion = new Conversacion(usuario, profesional, listaMensajes);
@@ -513,5 +490,22 @@ public final class Sistema implements Serializable {
         } else {
             return new String[0];
         }
+    }
+    public enum Preferencias {
+        CarnesRojas, CarnesBlancas, Verduras, Frutas, Harinas;
+    }
+    public enum Restricciones {
+        Diabetes, Veganismo, IntoleranciaLactosa, Celiaquia;
+    }
+    public enum Paises {
+        Argentina, Bolivia, Brasil, Chile, Colombia, CostaRica, Cuba, Ecuador, ElSalvador,
+        GuayanaFrancesa, Granada, Guatemala, Guayana, Haiti, Honduras, Jamaica,
+        Mexico, Nicaragua, Paraguay, Panama, Peru, PuertoRico, RepublicaDominicana, Surinam, Uruguay, Venezuela;
+    }
+    public enum DiasDeLaSemana {
+        Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo;
+    }
+    public enum IngestasPorDia {
+        Desayuno, Almuerzo, Cena;
     }
 }

@@ -445,7 +445,7 @@ layout.setHorizontalGroup(
         String paisGraduacion = (String) this.listaPaisGraduacion.getSelectedItem();
         String fechaNacimiento = this.dateChooserFechaNacimiento.getText();
         String fechaGraduacion = this.dateChooserFechaGraduacion.getText();
-        if (nombre.equals("") || apellido.equals("") || tituloProfesional.equals("Seleccione...") || paisGraduacion.equals("Seleccione...")) {
+        if (nombre.isEmpty() || apellido.isEmpty() || tituloProfesional.equals("Seleccione...") || paisGraduacion.equals("Seleccione...")) {
             this.lblDatosIncorrectos.setVisible(true);
             mostrarErrores(nombre, apellido, tituloProfesional, paisGraduacion);
         } else {
@@ -482,7 +482,7 @@ layout.setHorizontalGroup(
 
     private void txtNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNombreFocusLost
         String nombreIngresado = this.txtNombre.getText();
-        if (nombreIngresado.equals("")) {
+        if (nombreIngresado.isEmpty()) {
             this.lblValidarNombre.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png")));
             this.lblValidarNombre.setVisible(true);
             this.lblNombreVacio.setVisible(true);
@@ -495,7 +495,7 @@ layout.setHorizontalGroup(
 
     private void txtApellidoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtApellidoFocusLost
         String apellidoIngresado = this.txtApellido.getText();
-        if (apellidoIngresado.equals("")) {
+        if (apellidoIngresado.isEmpty()) {
             this.lblValidarApellido.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png")));
             this.lblValidarApellido.setVisible(true);
             this.lblApellidoVacio.setVisible(true);
@@ -595,12 +595,12 @@ layout.setHorizontalGroup(
     }
 
     private void mostrarErrores(String nombre, String apellido, String tituloProfesional, String paisGraduacion) {
-        if (nombre.equals("")) {
+        if (nombre.isEmpty()) {
             this.lblValidarNombre.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png")));
             this.lblValidarNombre.setVisible(true);
             this.lblNombreVacio.setVisible(true);
         }
-        if (apellido.equals("")) {
+        if (apellido.isEmpty()) {
             this.lblValidarApellido.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png")));
             this.lblValidarApellido.setVisible(true);
             this.lblApellidoVacio.setVisible(true);

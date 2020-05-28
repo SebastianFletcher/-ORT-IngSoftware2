@@ -1595,19 +1595,19 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
 
     private String cargarDatosDelPlan(String[][] planDiaADia, int indiceDia) {
         String actual = "DESAYUNO:" + "\n";
-        if (planDiaADia[indiceDia][0] == null || planDiaADia[indiceDia][0].equals("")) {
+        if (planDiaADia[indiceDia][0] == null || planDiaADia[indiceDia][0].isEmpty()) {
             actual += "\n" + "No planificado";
         } else {
             actual += "\n" + planDiaADia[indiceDia][0];
         }
         actual += "\n" + "\n" + "ALMUERZO:" + "\n";
-        if (planDiaADia[indiceDia][1] == null || planDiaADia[indiceDia][1].equals("")) {
+        if (planDiaADia[indiceDia][1] == null || planDiaADia[indiceDia][1].isEmpty()) {
             actual += "\n" + "No planificado";
         } else {
             actual += "\n" + planDiaADia[indiceDia][1];
         }
         actual += "\n" + "\n" + "CENA:" + "\n";
-        if (planDiaADia[indiceDia][2] == null || planDiaADia[indiceDia][2].equals("")) {
+        if (planDiaADia[indiceDia][2] == null || planDiaADia[indiceDia][2].isEmpty()) {
             actual += "\n" + "No planificado";
         } else {
             actual += "\n" + planDiaADia[indiceDia][2];

@@ -1,9 +1,8 @@
 package dominio;
 
 import java.util.ArrayList;
-import java.util.Objects;
-import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class IngestaTest {
 

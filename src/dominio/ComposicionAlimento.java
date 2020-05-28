@@ -2,7 +2,7 @@ package dominio;
 
 import java.io.Serializable;
 
-public final class ComposicionAlimento implements Serializable {
+public class ComposicionAlimento implements Serializable {
 
     private String nutriente;
     private float proporcion;

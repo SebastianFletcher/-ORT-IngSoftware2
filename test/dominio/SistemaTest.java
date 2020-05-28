@@ -2,12 +2,11 @@ package dominio;
 
 import dominio.Sistema.DiasDeLaSemana;
 import dominio.Sistema.IngestasPorDia;
-import dominio.Sistema.Paises;
 import dominio.Sistema.Preferencias;
 import dominio.Sistema.Restricciones;
 import java.util.ArrayList;
-import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class SistemaTest {
 
@@ -264,7 +263,7 @@ public class SistemaTest {
         Sistema sistemaATestear = new Sistema(null, null, null, null, null, null);
         sistemaATestear.crearUsuario("Martin", null, null, null, null, null, null, null);
         sistemaATestear.agregarIngestaAUsuario(listaIngestas, "11/02/17", "Papa");
-        Usuario user = (Usuario) sistemaATestear.getUsuarioPorNombre("Martin");
+        Usuario user = sistemaATestear.getUsuarioPorNombre("Martin");
         boolean retorno = sistemaATestear.agregarIngestaAUsuario(user.getAlimentosIngeridos(), "11/02/16", "Papa");
         assertTrue(retorno);
     }
@@ -279,7 +278,7 @@ public class SistemaTest {
         Sistema sistemaATestear = new Sistema(null, null, null, null, null, null);
         sistemaATestear.crearUsuario("Martin", null, null, null, null, null, null, null);
         sistemaATestear.agregarIngestaAUsuario(listaIngestas, "11/02/17", "Papa");
-        Usuario user = (Usuario) sistemaATestear.getUsuarioPorNombre("Martin");
+        Usuario user = sistemaATestear.getUsuarioPorNombre("Martin");
         boolean retorno = sistemaATestear.agregarIngestaAUsuario(user.getAlimentosIngeridos(), "11/02/17", "Papa");
         assertTrue(retorno);
     }
@@ -294,7 +293,7 @@ public class SistemaTest {
         Sistema sistemaATestear = new Sistema(null, null, null, null, null, null);
         sistemaATestear.crearUsuario("Martin", null, null, null, null, null, null, null);
         sistemaATestear.agregarIngestaAUsuario(listaIngestas, null, "Papa");
-        Usuario user = (Usuario) sistemaATestear.getUsuarioPorNombre("Martin");
+        Usuario user = sistemaATestear.getUsuarioPorNombre("Martin");
         boolean retorno = sistemaATestear.agregarIngestaAUsuario(user.getAlimentosIngeridos(), null, "Papa");
         assertFalse(retorno);
     }
@@ -303,7 +302,7 @@ public class SistemaTest {
     public void testAgregarIngestaAlimentoRepetidoFechaDistinta() {
         Sistema sistemaATestear = new Sistema(null, null, null, null, null, null);
         sistemaATestear.crearUsuario("Martin", null, null, null, null, null, null, null);
-        Usuario user = (Usuario) sistemaATestear.getUsuarioPorNombre("Martin");
+        Usuario user = sistemaATestear.getUsuarioPorNombre("Martin");
         boolean retorno = sistemaATestear.agregarIngestaAUsuario(user.getAlimentosIngeridos(), "11/02/16", "Papa");
         assertTrue(retorno);
     }
