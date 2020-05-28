@@ -34,9 +34,7 @@ public class Usuario extends Persona {
     }
 
     public void setNacionalidad(String unaNacionalidad) {
-       
         nacionalidad = unaNacionalidad;
-       
     }
 
     public ArrayList<String> getPreferencias() {
@@ -105,8 +103,8 @@ public class Usuario extends Persona {
         return super.toString();
     }
 
-    public void actualizarPreferenciasUsuario(Usuario usuario, ArrayList<String> pr) {
-        usuario.setPreferencias(pr);
+    public void actualizarPreferenciasUsuario(Usuario usuario, ArrayList<String> preferencias) {
+        usuario.setPreferencias(preferencias);
     }
 
     public void actualizarRestriccionesUsuario(Usuario usuario, ArrayList<String> restricciones) {

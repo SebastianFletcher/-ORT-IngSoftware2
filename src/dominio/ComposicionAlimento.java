@@ -2,7 +2,7 @@ package dominio;
 
 import java.io.Serializable;
 
-public class ComposicionAlimento implements Serializable {
+public final class ComposicionAlimento implements Serializable {
 
     private String nutriente;
     private float proporcion;
@@ -18,8 +18,6 @@ public class ComposicionAlimento implements Serializable {
 
     public void setNutriente(String unNutriente) {
         this.nutriente = unNutriente;
-
-
     }
 
     public float getProporcion() {

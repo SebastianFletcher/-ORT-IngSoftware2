@@ -10,10 +10,10 @@ public class Conversacion implements Serializable {
     public Persona profesional;
     private boolean fueAtendidaConsulta;
 
-    public Conversacion(Persona user, Persona pr, ArrayList<InformacionMensaje> lista) {
-        setUsuario(user);
-        setProfesional(pr);
-        setListaMensajes(lista);
+    public Conversacion(Persona unUsuario, Persona unProfesional, ArrayList<InformacionMensaje> listaMensajes) {
+        setUsuario(unUsuario);
+        setProfesional(unProfesional);
+        setListaMensajes(listaMensajes);
         setFueAtendidaConsulta(false);
     }
 
@@ -67,8 +67,8 @@ public class Conversacion implements Serializable {
             informacion.intercambiarRemitente();
         }
         listaMensajes.add(informacion);
-        boolean agregueMensaje = true;
-        return agregueMensaje;
+        
+        return true;
     }
 
     @Override

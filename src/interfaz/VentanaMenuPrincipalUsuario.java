@@ -1210,8 +1210,6 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
             this.btnNuevaConversacion1.setVisible(false);
             this.lblCrearConv.setVisible(false);
         }
-
-
     }//GEN-LAST:event_btnConsultaConProfesionalActionPerformed
 
     private void btnSolicitarPlanAlimentacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolicitarPlanAlimentacionActionPerformed

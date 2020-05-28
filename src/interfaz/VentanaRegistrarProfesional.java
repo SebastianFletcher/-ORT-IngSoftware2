@@ -450,8 +450,8 @@ layout.setHorizontalGroup(
             mostrarErrores(nombre, apellido, tituloProfesional, paisGraduacion);
         } else {
             this.lblDatosIncorrectos.setVisible(false);
-            boolean seAgregoProfesional = this.getSistema().crearProfesional(nombre, apellido, fechaNacimiento, this.fotoDePerfilActual, tituloProfesional, fechaGraduacion, paisGraduacion);
-            if (seAgregoProfesional) {
+
+            if (this.getSistema().crearProfesional(nombre, apellido, fechaNacimiento, this.fotoDePerfilActual, tituloProfesional, fechaGraduacion, paisGraduacion)) {
                 this.txtNombre.setText("");
                 this.txtApellido.setText("");
                 VentanaMenuPrincipal vPrincipal = new VentanaMenuPrincipal(sistema);

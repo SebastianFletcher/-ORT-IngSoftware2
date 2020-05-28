@@ -2,7 +2,7 @@ package dominio;
 
 import java.io.Serializable;
 
-public class PlanAlimentacion implements Serializable {
+public final class PlanAlimentacion implements Serializable {
 
     private String nombreDelPlan;
     private Usuario usuario;
@@ -10,17 +10,17 @@ public class PlanAlimentacion implements Serializable {
     public boolean fueAtendidoElPlan;
     private String[][] planDiaADia;
 
-    public PlanAlimentacion(String np,
-            Usuario usu,
-            Profesional pro,
+    public PlanAlimentacion(String unNombreDelPlan,
+            Usuario unUsuario,
+            Profesional unProfesional,
             boolean fueAtendido,
             String[][] unPlan) {
 
-        setNombreDelPlan(np);
-        setUsuario(usu);
-        setProfesional(pro);
-        setFueAtendidoElPlan(fueAtendido);
-        setPlanDiaADia(unPlan);
+        this.setNombreDelPlan(unNombreDelPlan);
+        this.setUsuario(unUsuario);
+        this.setProfesional(unProfesional);
+        this.setFueAtendidoElPlan(fueAtendido);
+        this.setPlanDiaADia(unPlan);
     }
 
     public Persona getUsuario() {
@@ -29,7 +29,6 @@ public class PlanAlimentacion implements Serializable {
 
     public void setUsuario(Usuario unUsuario) {
         usuario = unUsuario;
-        
     }
 
     public Profesional getProfesional() {
@@ -66,7 +65,6 @@ public class PlanAlimentacion implements Serializable {
 
     public void setNombreDelPlan(String unNombreDelPlan) {
         nombreDelPlan = unNombreDelPlan;
-       
     }
 
     @Override

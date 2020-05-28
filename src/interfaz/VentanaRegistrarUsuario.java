@@ -605,23 +605,12 @@ public class VentanaRegistrarUsuario extends javax.swing.JDialog {
         listaPreferencias[2] = Sistema.Preferencias.Frutas;
         listaPreferencias[3] = Sistema.Preferencias.Harinas;
         listaPreferencias[4] = Sistema.Preferencias.Verduras;
-        for (int i = 0; i < listaPreferencias.length; i++) {
-            if (i == 0) {
-                this.rdBtnCarnesRojas.setText("Carnes Rojas");
-            }
-            if (i == 1) {
-                this.rdBtnCarnesBlancas.setText("Carnes Blancas");
-            }
-            if (i == 2) {
-                this.rdBtnFrutas.setText("Frutas");
-            }
-            if (i == 3) {
-                this.rdBtnHarinas.setText("Harinas");
-            }
-            if (i == 4) {
-                this.rdBtnVerduras.setText("Verduras");
-            }
-        }
+       
+        this.rdBtnCarnesRojas.setText("Carnes Rojas");
+        this.rdBtnCarnesBlancas.setText("Carnes Blancas");
+        this.rdBtnFrutas.setText("Frutas");
+        this.rdBtnHarinas.setText("Harinas");
+        this.rdBtnVerduras.setText("Verduras");
     }
 
     private void cargarListaRestricciones() {
@@ -630,20 +619,11 @@ public class VentanaRegistrarUsuario extends javax.swing.JDialog {
         listaRestricciones[1] = Sistema.Restricciones.Diabetes;
         listaRestricciones[2] = Sistema.Restricciones.IntoleranciaLactosa;
         listaRestricciones[3] = Sistema.Restricciones.Veganismo;
-        for (int i = 0; i < listaRestricciones.length; i++) {
-            if (i == 0) {
-                this.rdBtnCeliaco.setText("Celiaquía");
-            }
-            if (i == 1) {
-                this.rdBtnDiabetes.setText("Diabetes");
-            }
-            if (i == 2) {
-                this.rdBtnIntoleranteLactosa.setText("Intolerante a la lactosa");
-            }
-            if (i == 3) {
-                this.rdBtnVegano.setText("Veganismo");
-            }
-        }
+        
+        this.rdBtnCeliaco.setText("Celiaquía");
+        this.rdBtnDiabetes.setText("Diabetes");
+        this.rdBtnIntoleranteLactosa.setText("Intolerante a la lactosa");
+        this.rdBtnVegano.setText("Veganismo");
     }
 
     private void cargarListaPaises() {

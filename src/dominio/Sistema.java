@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
-public class Sistema implements Serializable {
+public final class Sistema implements Serializable {
 
     private ArrayList<Usuario> listaUsuarios;
     private ArrayList<Profesional> listaProfesionales;
@@ -25,21 +25,21 @@ public class Sistema implements Serializable {
             ArrayList<Conversacion> unaListaConversaciones,
             Persona personaLogueada) {
 
-        setListaUsuarios(unaListaUsuarios);
-        setListaProfesionales(unaListaProfesionales);
-        setListaAlimentos(unaListaAlimentos);
-        setListaConversaciones(unaListaConversaciones);
-        setListaPlanesAlimentacion(unaListaPlanesAlimentacion);
-        setPersonaLogueada(personaLogueada);
+        this.setListaUsuarios(unaListaUsuarios);
+        this.setListaProfesionales(unaListaProfesionales);
+        this.setListaAlimentos(unaListaAlimentos);
+        this.setListaConversaciones(unaListaConversaciones);
+        this.setListaPlanesAlimentacion(unaListaPlanesAlimentacion);
+        this.setPersonaLogueada(personaLogueada);
     }
 
     public Sistema() {
-        setListaUsuarios(new ArrayList<>());
-        setListaProfesionales(new ArrayList<>());
-        setListaAlimentos(new ArrayList<>());
-        setListaConversaciones(new ArrayList<>());
-        setListaPlanesAlimentacion(new ArrayList<>());
-        setPersonaLogueada(new Usuario("Nombre", "Apellido", "",
+        this.setListaUsuarios(new ArrayList<>());
+        this.setListaProfesionales(new ArrayList<>());
+        this.setListaAlimentos(new ArrayList<>());
+        this.setListaConversaciones(new ArrayList<>());
+        this.setListaPlanesAlimentacion(new ArrayList<>());
+        this.setPersonaLogueada(new Usuario("Nombre", "Apellido", "",
                 new ImageIcon(getClass().getResource("/Imagenes/fotoDeUsuarioStandard.png")),
                 "", null, null, null));
 
@@ -305,7 +305,7 @@ public class Sistema implements Serializable {
 
     public boolean agregarMensajeConversacion(String remitente, String destinatario, String mensaje, boolean intercambioRemitente, boolean consultaRespondida) {
         boolean pudeAgregarMensaje = false;
-        if (remitente != null && !remitente.isEmpty() && !destinatario.isEmpty() && destinatario != null) {
+        if (remitente != null && !remitente.isEmpty() && destinatario != null && !destinatario.isEmpty() ) {
             for (int i = 0; getListaConversaciones() != null && i < getListaConversaciones().size(); i++) {
                 Conversacion conversacionActual = getListaConversaciones().get(i);
                 String nombreApellidoProfesional = conversacionActual.getProfesional().getNombreCompleto();
@@ -343,26 +343,24 @@ public class Sistema implements Serializable {
 
     public boolean agregarIngestaAUsuario(ArrayList<Ingesta> listaIngestasDelUsuario, String fechaIngesta, String nuevoAlimento) {
         boolean ingestaAgregada = false;
-        if (listaIngestasDelUsuario != null) {
-            
-                if (yaExisteIngestaEnEsaFecha(listaIngestasDelUsuario, fechaIngesta)) {
-                    for (int i = 0; i < listaIngestasDelUsuario.size(); i++) {
-                        if (listaIngestasDelUsuario.get(i).getFechaDeIngesta().equals(fechaIngesta)) {
-                            ArrayList<Alimento> listaAlimentosActual = listaIngestasDelUsuario.get(i).getListaAlimentosPorFecha();
-                            Alimento alimentoAAgregar = devolverAlimentoDadoNombre(nuevoAlimento);
-                            listaAlimentosActual.add(alimentoAAgregar);
-                        }
-                    }
-                } else {
+        if (listaIngestasDelUsuario != null && yaExisteIngestaEnEsaFecha(listaIngestasDelUsuario, fechaIngesta)) {
+            for (int i = 0; i < listaIngestasDelUsuario.size(); i++) {
+                if (listaIngestasDelUsuario.get(i).getFechaDeIngesta().equals(fechaIngesta)) {
+                    ArrayList<Alimento> listaAlimentosActual = listaIngestasDelUsuario.get(i).getListaAlimentosPorFecha();
                     Alimento alimentoAAgregar = devolverAlimentoDadoNombre(nuevoAlimento);
-                    ArrayList<Alimento> nuevaLista = new ArrayList<>();
-                    nuevaLista.add(alimentoAAgregar);
-                    Ingesta nuevaIngesta = new Ingesta(fechaIngesta, nuevaLista);
-                    listaIngestasDelUsuario.add(nuevaIngesta);
+                    listaAlimentosActual.add(alimentoAAgregar);
                 }
-                ingestaAgregada = true;
-            
+            }
+            ingestaAgregada = true;
+        } else if(listaIngestasDelUsuario != null) {
+            Alimento alimentoAAgregar = devolverAlimentoDadoNombre(nuevoAlimento);
+            ArrayList<Alimento> nuevaLista = new ArrayList<>();
+            nuevaLista.add(alimentoAAgregar);
+            Ingesta nuevaIngesta = new Ingesta(fechaIngesta, nuevaLista);
+            listaIngestasDelUsuario.add(nuevaIngesta);
+            ingestaAgregada = true;
         }
+         
         return ingestaAgregada;
     }
 
@@ -424,10 +422,7 @@ public class Sistema implements Serializable {
 
     }
 
-    public boolean atenderSolicitudDelPlan(String[][] planAlimentacion,
-            Profesional profesional,
-            Usuario usuario,
-            String nombrePlan) {
+    public boolean atenderSolicitudDelPlan(String[][] planAlimentacion, Profesional profesional, Usuario usuario, String nombrePlan) {
         boolean fueAtendido = false;
         for (int i = 0; i < this.listaPlanesAlimentacion.size(); i++) {
             PlanAlimentacion actual = this.listaPlanesAlimentacion.get(i);
@@ -457,12 +452,12 @@ public class Sistema implements Serializable {
         return planesDelUsuario;
     }
 
-    public PlanAlimentacion devolverPlanDadoNombre(String np) {
+    public PlanAlimentacion devolverPlanDadoNombre(String nombrePlan) {
         PlanAlimentacion planRetorno = new PlanAlimentacion(null, null, null, false, null);
-        if (np != null) {
+        if (nombrePlan != null) {
             for (int i = 0; i < this.listaPlanesAlimentacion.size(); i++) {
                 String nombrePlanActual = this.listaPlanesAlimentacion.get(i).getNombreDelPlan();
-                if (nombrePlanActual.equals(np)) {
+                if (nombrePlanActual.equals(nombrePlan)) {
                     planRetorno = this.listaPlanesAlimentacion.get(i);
                 }
             }

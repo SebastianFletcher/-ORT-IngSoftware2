@@ -1851,8 +1851,8 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         } else {
             this.lblDatosIncorrectos.setVisible(false);
             this.lblDatosIncorrectos2.setVisible(false);
-            boolean seAgregoAlimento = this.getSistema().crearAlimento(nombre, tipoAlimento, listaNutrientesConProporcion, fotoDeAlimentoActual);
-            if (seAgregoAlimento) {
+            
+            if (this.getSistema().crearAlimento(nombre, tipoAlimento, listaNutrientesConProporcion, fotoDeAlimentoActual)) {
                 this.txtNombre.setText("");
                 this.listaTipoAlimentos.setSelectedIndex(0);
                 this.panelAlimentroRegistradoCorrectamente.setVisible(true);

@@ -2,7 +2,7 @@ package dominio;
 
 import javax.swing.ImageIcon;
 
-public class Profesional extends Persona {
+public final class Profesional extends Persona {
 
     public String tituloProfesional;
     private String fechaGraduacion;
@@ -16,13 +16,13 @@ public class Profesional extends Persona {
             String unaFechaGraduacion,
             String unPaisGraduacion) {
 
-        setNombre(unNombre);
-        setApellido(unApellido);
-        setFechaNacimiento(unaFechaNacimiento);
-        setFotoDePerfil(unaFoto);
-        setTituloProfesional(unTitulo);
-        setFechaGraduacion(unaFechaGraduacion);
-        setPaisGraduacion(unPaisGraduacion);
+        this.setNombre(unNombre);
+        this.setApellido(unApellido);
+        this.setFechaNacimiento(unaFechaNacimiento);
+        this.setFotoDePerfil(unaFoto);
+        this.setTituloProfesional(unTitulo);
+        this.setFechaGraduacion(unaFechaGraduacion);
+        this.setPaisGraduacion(unPaisGraduacion);
     }
 
     public String getTituloProfesional() {

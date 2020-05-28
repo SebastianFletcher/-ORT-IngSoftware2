@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
-public class Alimento implements Serializable {
+public final class Alimento implements Serializable {
 
     private String nombre;
     private String tipoAlimento;
@@ -38,9 +38,8 @@ public class Alimento implements Serializable {
         return this.tipoAlimento;
     }
 
-    public void setTipoAlimento(String TA) {
-        tipoAlimento = TA;
-        
+    public void setTipoAlimento(String unTipoAlimento) {
+        tipoAlimento = unTipoAlimento;
     }
 
     public ArrayList<ComposicionAlimento> getListaNutrientesConProporcion() {

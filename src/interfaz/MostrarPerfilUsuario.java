@@ -16,20 +16,26 @@ public class MostrarPerfilUsuario extends javax.swing.JDialog {
         this.sistema = unSistema;
         this.nombreUsuario = usuarioAMostrar;
         this.setLocationRelativeTo(null);
+        
         Usuario usuarioPerfil = sistema.getUsuarioPorNombre(nombreUsuario);
         this.lblNombreUsuario.setText(usuarioPerfil.getNombreCompleto());
         this.lblFechaNacimientoUsuario.setText(usuarioPerfil.getFechaNacimiento());
         this.lblFotoDeUsuario.setIcon(usuarioPerfil.getFotoDePerfil());
+        
         if (usuarioPerfil.getArrayAlimentosIngeridos().length > 0) {
             ArrayList <Ingesta> ingeridos = usuarioPerfil.getAlimentosIngeridos();
             ArrayList <String> listaASetear = new ArrayList <>();
+          
             for (int i = 0; i < ingeridos.size(); i++) {
+               
                 Ingesta ingestaActual = ingeridos.get(i);
+             
                 ArrayList <Alimento> alimentosActuales = ingestaActual.getListaAlimentosPorFecha();
                 for (int j = 0; j < alimentosActuales.size(); j++) {
-                    listaASetear.add(alimentosActuales.get(i).toString());
+                    listaASetear.add(alimentosActuales.get(j).toString());
                 }
             }
+            
             String [] arrayASetear = new String [listaASetear.size()]; 
             for (int i = 0; i < listaASetear.size(); i++) {
                 arrayASetear[i] = listaASetear.get(i);
