@@ -51,6 +51,7 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         rdBtnCarnesBlancas = new javax.swing.JRadioButton();
         btnEditarPreferencias = new javax.swing.JButton();
         lblEditarPreferencias = new javax.swing.JLabel();
+        btnCerrarSistema = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(508, 450));
@@ -90,7 +91,7 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
                 .addComponent(lblIconoListo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblListo)
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelEditarPreferencias.setBackground(new java.awt.Color(51, 51, 51));
@@ -109,7 +110,7 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         lblTxtPreferencias.setForeground(new java.awt.Color(255, 255, 255));
         lblTxtPreferencias.setText("Preferencias");
         panelEditarPreferencias.add(lblTxtPreferencias);
-        lblTxtPreferencias.setBounds(70, 100, 265, 38);
+        lblTxtPreferencias.setBounds(70, 100, 265, 36);
 
         rdBtnVerduras.setBackground(new java.awt.Color(51, 51, 51));
         rdBtnVerduras.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
@@ -121,7 +122,7 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
             }
         });
         panelEditarPreferencias.add(rdBtnVerduras);
-        rdBtnVerduras.setBounds(100, 230, 250, 35);
+        rdBtnVerduras.setBounds(100, 230, 250, 30);
 
         rdBtnHarinas.setBackground(new java.awt.Color(51, 51, 51));
         rdBtnHarinas.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
@@ -133,14 +134,14 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
             }
         });
         panelEditarPreferencias.add(rdBtnHarinas);
-        rdBtnHarinas.setBounds(100, 310, 200, 35);
+        rdBtnHarinas.setBounds(100, 310, 200, 30);
 
         rdBtnFrutas.setBackground(new java.awt.Color(51, 51, 51));
         rdBtnFrutas.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
         rdBtnFrutas.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnFrutas.setText("Preferencia 4");
         panelEditarPreferencias.add(rdBtnFrutas);
-        rdBtnFrutas.setBounds(100, 270, 240, 35);
+        rdBtnFrutas.setBounds(100, 270, 240, 30);
 
         rdBtnCarnesRojas.setBackground(new java.awt.Color(51, 51, 51));
         rdBtnCarnesRojas.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
@@ -152,14 +153,14 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
             }
         });
         panelEditarPreferencias.add(rdBtnCarnesRojas);
-        rdBtnCarnesRojas.setBounds(100, 160, 240, 35);
+        rdBtnCarnesRojas.setBounds(100, 160, 240, 30);
 
         rdBtnCarnesBlancas.setBackground(new java.awt.Color(51, 51, 51));
         rdBtnCarnesBlancas.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
         rdBtnCarnesBlancas.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnCarnesBlancas.setText("Preferencia 2");
         panelEditarPreferencias.add(rdBtnCarnesBlancas);
-        rdBtnCarnesBlancas.setBounds(100, 190, 240, 35);
+        rdBtnCarnesBlancas.setBounds(100, 190, 240, 30);
 
         btnEditarPreferencias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoOkEditar.png"))); // NOI18N
         btnEditarPreferencias.setBorderPainted(false);
@@ -175,6 +176,20 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         lblEditarPreferencias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoEditarPreferencias.png"))); // NOI18N
         panelEditarPreferencias.add(lblEditarPreferencias);
         lblEditarPreferencias.setBounds(38, 11, 72, 71);
+
+        btnCerrarSistema.setBackground(new java.awt.Color(51, 51, 51));
+        btnCerrarSistema.setForeground(new java.awt.Color(51, 51, 51));
+        btnCerrarSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Close_Window_48px.png"))); // NOI18N
+        btnCerrarSistema.setBorderPainted(false);
+        btnCerrarSistema.setContentAreaFilled(false);
+        btnCerrarSistema.setFocusPainted(false);
+        btnCerrarSistema.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSistemaActionPerformed(evt);
+            }
+        });
+        panelEditarPreferencias.add(btnCerrarSistema);
+        btnCerrarSistema.setBounds(450, 10, 50, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -224,6 +239,11 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_rdBtnVerdurasActionPerformed
 
+    private void btnCerrarSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSistemaActionPerformed
+        this.sistema.guardarDatosSistema();
+        this.dispose();
+    }//GEN-LAST:event_btnCerrarSistemaActionPerformed
+
     void agregarPreferenciasUsuario(ArrayList<String> preferencias) {
         if (this.rdBtnCarnesBlancas.isSelected()) {
             preferencias.add("Carnes Blancas");
@@ -242,6 +262,7 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCerrarSistema;
     private javax.swing.JButton btnEditarPreferencias;
     private javax.swing.JLabel lblEditar;
     private javax.swing.JLabel lblEditarPreferencias;
