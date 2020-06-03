@@ -99,7 +99,7 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         panelEditarPreferencias.setPreferredSize(new java.awt.Dimension(508, 450));
         panelEditarPreferencias.setLayout(null);
 
-        lblEditar.setFont(new java.awt.Font("Levenim MT", 0, 50)); // NOI18N
+        lblEditar.setFont(new java.awt.Font("Levenim MT", 0, 36)); // NOI18N
         lblEditar.setForeground(new java.awt.Color(255, 255, 255));
         lblEditar.setText("Editar");
         panelEditarPreferencias.add(lblEditar);
@@ -109,7 +109,7 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         lblTxtPreferencias.setForeground(new java.awt.Color(255, 255, 255));
         lblTxtPreferencias.setText("Preferencias");
         panelEditarPreferencias.add(lblTxtPreferencias);
-        lblTxtPreferencias.setBounds(100, 120, 160, 36);
+        lblTxtPreferencias.setBounds(90, 110, 160, 36);
 
         rdBtnVerduras.setBackground(new java.awt.Color(51, 51, 51));
         rdBtnVerduras.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N

@@ -126,12 +126,12 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         txtComidasViernes = new javax.swing.JTextArea();
         lblAlimentoIngeridoSeleccionado11 = new javax.swing.JLabel();
         lblTituloDelProfesional = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
         panelIngestaRegistradaCorrectamente = new javax.swing.JPanel();
         lblNohayConsultas1 = new javax.swing.JLabel();
         lblNohayConsultasTexto1 = new javax.swing.JLabel();
         panelAlimentoIngerido = new javax.swing.JPanel();
         fechaIngestaUsuario = new datechooser.beans.DateChooserCombo();
-        lblAlimentoIngerido = new javax.swing.JLabel();
         lblAlimentoIngerido2 = new javax.swing.JLabel();
         lblFechaAlimentoIngerido = new javax.swing.JLabel();
         lblAlimentoIngeridoSeleccionado = new javax.swing.JLabel();
@@ -565,7 +565,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         panelVerPlanAlimentacion.setMinimumSize(new java.awt.Dimension(800, 800));
         panelVerPlanAlimentacion.setLayout(null);
 
-        lblPlanPropuesto1.setFont(new java.awt.Font("Levenim MT", 0, 40)); // NOI18N
+        lblPlanPropuesto1.setFont(new java.awt.Font("Levenim MT", 0, 36)); // NOI18N
         lblPlanPropuesto1.setForeground(new java.awt.Color(255, 255, 255));
         lblPlanPropuesto1.setText("Plan de alimentación propuesto");
         panelVerPlanAlimentacion.add(lblPlanPropuesto1);
@@ -575,146 +575,134 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         panelVerPlanAlimentacion.add(lblPlanPropuesto2);
         lblPlanPropuesto2.setBounds(27, 11, 100, 100);
 
-        lblNombreDelPlan.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        lblNombreDelPlan.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblNombreDelPlan.setForeground(new java.awt.Color(255, 255, 255));
         lblNombreDelPlan.setText("nombre del plan");
         panelVerPlanAlimentacion.add(lblNombreDelPlan);
-        lblNombreDelPlan.setBounds(260, 110, 320, 25);
+        lblNombreDelPlan.setBounds(260, 110, 320, 22);
 
-        lblAlimentoIngeridoSeleccionado2.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        lblAlimentoIngeridoSeleccionado2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado2.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado2.setText("Nombre:");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado2);
-        lblAlimentoIngeridoSeleccionado2.setBounds(150, 110, 100, 25);
+        lblAlimentoIngeridoSeleccionado2.setBounds(150, 110, 100, 22);
 
-        lblNombreDelProfesional.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        lblNombreDelProfesional.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblNombreDelProfesional.setForeground(new java.awt.Color(255, 255, 255));
         lblNombreDelProfesional.setText("nombre del profesional");
         panelVerPlanAlimentacion.add(lblNombreDelProfesional);
-        lblNombreDelProfesional.setBounds(280, 150, 280, 25);
+        lblNombreDelProfesional.setBounds(280, 150, 280, 22);
 
-        lblAlimentoIngeridoSeleccionado4.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblAlimentoIngeridoSeleccionado4.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado4.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado4.setText("Martes");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado4);
-        lblAlimentoIngeridoSeleccionado4.setBounds(250, 260, 130, 25);
+        lblAlimentoIngeridoSeleccionado4.setBounds(220, 250, 130, 22);
 
-        lblAlimentoIngeridoSeleccionado5.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        lblAlimentoIngeridoSeleccionado5.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado5.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado5.setText("Título del profesional:");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado5);
-        lblAlimentoIngeridoSeleccionado5.setBounds(150, 190, 220, 25);
+        lblAlimentoIngeridoSeleccionado5.setBounds(150, 190, 220, 22);
 
-        lblAlimentoIngeridoSeleccionado6.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblAlimentoIngeridoSeleccionado6.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado6.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado6.setText("Miércoles");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado6);
-        lblAlimentoIngeridoSeleccionado6.setBounds(430, 260, 130, 25);
+        lblAlimentoIngeridoSeleccionado6.setBounds(410, 250, 130, 22);
 
-        lblAlimentoIngeridoSeleccionado7.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblAlimentoIngeridoSeleccionado7.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado7.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado7.setText("Jueves");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado7);
-        lblAlimentoIngeridoSeleccionado7.setBounds(600, 260, 130, 25);
+        lblAlimentoIngeridoSeleccionado7.setBounds(590, 250, 130, 22);
 
-        lblAlimentoIngeridoSeleccionado8.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblAlimentoIngeridoSeleccionado8.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado8.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado8.setText("Viernes");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado8);
-        lblAlimentoIngeridoSeleccionado8.setBounds(160, 530, 130, 25);
+        lblAlimentoIngeridoSeleccionado8.setBounds(30, 500, 130, 25);
 
-        lblAlimentoIngeridoSeleccionado9.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblAlimentoIngeridoSeleccionado9.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado9.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado9.setText("Sábado");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado9);
-        lblAlimentoIngeridoSeleccionado9.setBounds(360, 530, 130, 25);
+        lblAlimentoIngeridoSeleccionado9.setBounds(220, 500, 130, 22);
 
-        lblAlimentoIngeridoSeleccionado10.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblAlimentoIngeridoSeleccionado10.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado10.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado10.setText("Domingo");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado10);
-        lblAlimentoIngeridoSeleccionado10.setBounds(520, 530, 110, 25);
+        lblAlimentoIngeridoSeleccionado10.setBounds(410, 500, 110, 22);
 
-        lblAlimentoIngeridoSeleccionado14.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblAlimentoIngeridoSeleccionado14.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado14.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado14.setText("Lunes");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado14);
-        lblAlimentoIngeridoSeleccionado14.setBounds(50, 260, 130, 25);
+        lblAlimentoIngeridoSeleccionado14.setBounds(40, 250, 130, 25);
 
-        txtComidasMartes.setBackground(new java.awt.Color(51, 51, 51));
-        txtComidasMartes.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
-        txtComidasMartes.setForeground(new java.awt.Color(255, 255, 255));
+        txtComidasMartes.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtComidasMartes.setRows(5);
         jScrollPane34.setViewportView(txtComidasMartes);
 
         panelVerPlanAlimentacion.add(jScrollPane34);
-        jScrollPane34.setBounds(210, 300, 160, 210);
+        jScrollPane34.setBounds(220, 280, 160, 210);
 
-        txtComidasMiercoles.setBackground(new java.awt.Color(51, 51, 51));
-        txtComidasMiercoles.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
-        txtComidasMiercoles.setForeground(new java.awt.Color(255, 255, 255));
+        txtComidasMiercoles.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtComidasMiercoles.setRows(5);
         jScrollPane35.setViewportView(txtComidasMiercoles);
 
         panelVerPlanAlimentacion.add(jScrollPane35);
-        jScrollPane35.setBounds(400, 300, 160, 210);
+        jScrollPane35.setBounds(410, 280, 160, 210);
 
-        txtComidasJueves.setBackground(new java.awt.Color(51, 51, 51));
-        txtComidasJueves.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
-        txtComidasJueves.setForeground(new java.awt.Color(255, 255, 255));
+        txtComidasJueves.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtComidasJueves.setRows(5);
         jScrollPane36.setViewportView(txtComidasJueves);
 
         panelVerPlanAlimentacion.add(jScrollPane36);
-        jScrollPane36.setBounds(580, 300, 160, 210);
+        jScrollPane36.setBounds(590, 280, 160, 210);
 
-        txtComidasSabado.setBackground(new java.awt.Color(51, 51, 51));
-        txtComidasSabado.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
-        txtComidasSabado.setForeground(new java.awt.Color(255, 255, 255));
+        txtComidasSabado.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtComidasSabado.setRows(5);
         jScrollPane37.setViewportView(txtComidasSabado);
 
         panelVerPlanAlimentacion.add(jScrollPane37);
-        jScrollPane37.setBounds(320, 570, 160, 210);
+        jScrollPane37.setBounds(220, 530, 160, 210);
 
-        txtComidasLunes.setBackground(new java.awt.Color(51, 51, 51));
-        txtComidasLunes.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
-        txtComidasLunes.setForeground(new java.awt.Color(255, 255, 255));
+        txtComidasLunes.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtComidasLunes.setRows(5);
         jScrollPane38.setViewportView(txtComidasLunes);
 
         panelVerPlanAlimentacion.add(jScrollPane38);
-        jScrollPane38.setBounds(20, 300, 160, 210);
+        jScrollPane38.setBounds(30, 280, 160, 210);
 
-        txtComidasDomingo.setBackground(new java.awt.Color(51, 51, 51));
-        txtComidasDomingo.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
-        txtComidasDomingo.setForeground(new java.awt.Color(255, 255, 255));
+        txtComidasDomingo.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtComidasDomingo.setRows(5);
         jScrollPane39.setViewportView(txtComidasDomingo);
 
         panelVerPlanAlimentacion.add(jScrollPane39);
-        jScrollPane39.setBounds(510, 570, 160, 210);
+        jScrollPane39.setBounds(410, 530, 160, 210);
 
-        txtComidasViernes.setBackground(new java.awt.Color(51, 51, 51));
-        txtComidasViernes.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
-        txtComidasViernes.setForeground(new java.awt.Color(255, 255, 255));
+        txtComidasViernes.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtComidasViernes.setRows(5);
         jScrollPane40.setViewportView(txtComidasViernes);
 
         panelVerPlanAlimentacion.add(jScrollPane40);
-        jScrollPane40.setBounds(130, 570, 160, 210);
+        jScrollPane40.setBounds(30, 530, 160, 210);
 
-        lblAlimentoIngeridoSeleccionado11.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        lblAlimentoIngeridoSeleccionado11.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado11.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado11.setText("Profesional:");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado11);
-        lblAlimentoIngeridoSeleccionado11.setBounds(150, 150, 130, 25);
+        lblAlimentoIngeridoSeleccionado11.setBounds(150, 150, 130, 22);
 
-        lblTituloDelProfesional.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        lblTituloDelProfesional.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblTituloDelProfesional.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloDelProfesional.setText("titulo del profesional");
         panelVerPlanAlimentacion.add(lblTituloDelProfesional);
-        lblTituloDelProfesional.setBounds(370, 190, 410, 25);
+        lblTituloDelProfesional.setBounds(370, 190, 410, 22);
+        panelVerPlanAlimentacion.add(jSeparator3);
+        jSeparator3.setBounds(30, 230, 720, 10);
 
         panelDerecho.add(panelVerPlanAlimentacion, "card5");
 
@@ -741,35 +729,29 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         panelAlimentoIngerido.setMinimumSize(new java.awt.Dimension(800, 800));
         panelAlimentoIngerido.setLayout(null);
 
-        fechaIngestaUsuario.setFieldFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 17));
+        fechaIngestaUsuario.setFieldFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 18));
         panelAlimentoIngerido.add(fechaIngestaUsuario);
-        fechaIngestaUsuario.setBounds(49, 477, 178, 38);
+        fechaIngestaUsuario.setBounds(100, 308, 300, 30);
 
-        lblAlimentoIngerido.setFont(new java.awt.Font("Levenim MT", 0, 50)); // NOI18N
-        lblAlimentoIngerido.setForeground(new java.awt.Color(255, 255, 255));
-        lblAlimentoIngerido.setText("ingerido");
-        panelAlimentoIngerido.add(lblAlimentoIngerido);
-        lblAlimentoIngerido.setBounds(320, 120, 215, 59);
-
-        lblAlimentoIngerido2.setFont(new java.awt.Font("Levenim MT", 0, 50)); // NOI18N
+        lblAlimentoIngerido2.setFont(new java.awt.Font("Levenim MT", 0, 36)); // NOI18N
         lblAlimentoIngerido2.setForeground(new java.awt.Color(255, 255, 255));
-        lblAlimentoIngerido2.setText("Datos sobre el alimento");
+        lblAlimentoIngerido2.setText("Datos sobre el alimento ingerido");
         panelAlimentoIngerido.add(lblAlimentoIngerido2);
-        lblAlimentoIngerido2.setBounds(160, 40, 596, 62);
+        lblAlimentoIngerido2.setBounds(130, 70, 596, 62);
 
-        lblFechaAlimentoIngerido.setFont(new java.awt.Font("Century Gothic", 0, 30)); // NOI18N
+        lblFechaAlimentoIngerido.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblFechaAlimentoIngerido.setForeground(new java.awt.Color(255, 255, 255));
         lblFechaAlimentoIngerido.setText("Ingrese la fecha de ingesta");
         panelAlimentoIngerido.add(lblFechaAlimentoIngerido);
-        lblFechaAlimentoIngerido.setBounds(49, 410, 624, 36);
+        lblFechaAlimentoIngerido.setBounds(100, 270, 250, 22);
 
-        lblAlimentoIngeridoSeleccionado.setFont(new java.awt.Font("Century Gothic", 0, 30)); // NOI18N
+        lblAlimentoIngeridoSeleccionado.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado.setText("Ingrese el nuevo alimento ");
         panelAlimentoIngerido.add(lblAlimentoIngeridoSeleccionado);
-        lblAlimentoIngeridoSeleccionado.setBounds(49, 258, 624, 36);
+        lblAlimentoIngeridoSeleccionado.setBounds(100, 190, 624, 22);
 
-        comboAlimentosEnSistema.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
+        comboAlimentosEnSistema.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         comboAlimentosEnSistema.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione..." }));
         comboAlimentosEnSistema.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -777,11 +759,11 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
             }
         });
         panelAlimentoIngerido.add(comboAlimentosEnSistema);
-        comboAlimentosEnSistema.setBounds(49, 314, 184, 41);
+        comboAlimentosEnSistema.setBounds(100, 220, 310, 41);
 
         lblNuevoAlimentoIngerido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoNuevoAlimento.png"))); // NOI18N
         panelAlimentoIngerido.add(lblNuevoAlimentoIngerido);
-        lblNuevoAlimentoIngerido.setBounds(40, 60, 100, 100);
+        lblNuevoAlimentoIngerido.setBounds(30, 50, 100, 100);
 
         btnNuevaIngesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoAgregarALaLista.png"))); // NOI18N
         btnNuevaIngesta.setBorderPainted(false);
@@ -792,24 +774,24 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
             }
         });
         panelAlimentoIngerido.add(btnNuevaIngesta);
-        btnNuevaIngesta.setBounds(640, 628, 124, 117);
+        btnNuevaIngesta.setBounds(500, 380, 124, 117);
 
         lblValidarNuevoAlimento.setForeground(new java.awt.Color(255, 255, 255));
         lblValidarNuevoAlimento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png"))); // NOI18N
         panelAlimentoIngerido.add(lblValidarNuevoAlimento);
-        lblValidarNuevoAlimento.setBounds(250, 310, 32, 44);
+        lblValidarNuevoAlimento.setBounds(420, 220, 32, 44);
 
         lblNuevoAlimentoVacio.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
         lblNuevoAlimentoVacio.setForeground(new java.awt.Color(240, 128, 128));
         lblNuevoAlimentoVacio.setText("Dato vacio");
         panelAlimentoIngerido.add(lblNuevoAlimentoVacio);
-        lblNuevoAlimentoVacio.setBounds(300, 310, 120, 38);
+        lblNuevoAlimentoVacio.setBounds(460, 220, 120, 38);
 
         lblDatosIncorrectos2.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
         lblDatosIncorrectos2.setForeground(new java.awt.Color(255, 153, 153));
         lblDatosIncorrectos2.setText("Aún quedan datos incorrectos");
         panelAlimentoIngerido.add(lblDatosIncorrectos2);
-        lblDatosIncorrectos2.setBounds(320, 650, 341, 40);
+        lblDatosIncorrectos2.setBounds(210, 420, 300, 40);
 
         panelDerecho.add(panelAlimentoIngerido, "card5");
 
@@ -894,7 +876,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
                     .addGroup(panelPlanSolicitadoCorrectamenteLayout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(lblPlanSolicitado)))
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
         panelPlanSolicitadoCorrectamenteLayout.setVerticalGroup(
             panelPlanSolicitadoCorrectamenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1507,7 +1489,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JLabel lblAlimentoIngerido;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel lblAlimentoIngerido2;
     private javax.swing.JLabel lblAlimentoIngeridoSeleccionado;
     private javax.swing.JLabel lblAlimentoIngeridoSeleccionado10;
