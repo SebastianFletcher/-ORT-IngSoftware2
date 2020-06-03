@@ -60,6 +60,7 @@ public class VentanaRegistrarUsuario extends javax.swing.JDialog {
     private void initComponents() {
 
         panel1 = new javax.swing.JPanel();
+        btnCerrarSistema1 = new javax.swing.JButton();
         lblTituloVentana = new javax.swing.JLabel();
         btnHome = new javax.swing.JButton();
         icono = new javax.swing.JLabel();
@@ -94,7 +95,6 @@ public class VentanaRegistrarUsuario extends javax.swing.JDialog {
         lblNombreVacio = new javax.swing.JLabel();
         lblApellidoVacio = new javax.swing.JLabel();
         lblPaisVacio = new javax.swing.JLabel();
-        btnCerrarSistema = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1060, 800));
@@ -110,6 +110,22 @@ public class VentanaRegistrarUsuario extends javax.swing.JDialog {
 
         panel1.setBackground(new java.awt.Color(164, 211, 249));
         panel1.setMaximumSize(new java.awt.Dimension(270, 800));
+
+        btnCerrarSistema1.setBackground(new java.awt.Color(51, 51, 51));
+        btnCerrarSistema1.setForeground(new java.awt.Color(51, 51, 51));
+        btnCerrarSistema1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Close_Window_48px.png"))); // NOI18N
+        btnCerrarSistema1.setBorderPainted(false);
+        btnCerrarSistema1.setContentAreaFilled(false);
+        btnCerrarSistema1.setFocusPainted(false);
+        btnCerrarSistema1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        btnCerrarSistema1.setMaximumSize(new java.awt.Dimension(10, 10));
+        btnCerrarSistema1.setMinimumSize(new java.awt.Dimension(10, 10));
+        btnCerrarSistema1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnCerrarSistema1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSistema1ActionPerformed(evt);
+            }
+        });
 
         lblTituloVentana.setFont(new java.awt.Font("Segoe Script", 1, 50)); // NOI18N
         lblTituloVentana.setForeground(new java.awt.Color(0, 51, 153));
@@ -138,26 +154,30 @@ public class VentanaRegistrarUsuario extends javax.swing.JDialog {
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel1Layout.createSequentialGroup()
                         .addComponent(btnHome)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCerrarSistema1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
                         .addGap(0, 22, Short.MAX_VALUE)
                         .addComponent(icono, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addComponent(lblTituloVentana, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnHome)
-                .addGap(116, 116, 116)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnHome))
+                    .addComponent(btnCerrarSistema1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(107, 107, 107)
                 .addComponent(lblTituloVentana, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(icono, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(349, Short.MAX_VALUE))
+                .addContainerGap(354, Short.MAX_VALUE))
         );
 
         getContentPane().add(panel1);
@@ -421,20 +441,6 @@ public class VentanaRegistrarUsuario extends javax.swing.JDialog {
     panel2.add(lblPaisVacio);
     lblPaisVacio.setBounds(580, 280, 120, 38);
 
-    btnCerrarSistema.setBackground(new java.awt.Color(51, 51, 51));
-    btnCerrarSistema.setForeground(new java.awt.Color(51, 51, 51));
-    btnCerrarSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Close_Window_48px.png"))); // NOI18N
-    btnCerrarSistema.setBorderPainted(false);
-    btnCerrarSistema.setContentAreaFilled(false);
-    btnCerrarSistema.setFocusPainted(false);
-    btnCerrarSistema.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            btnCerrarSistemaActionPerformed(evt);
-        }
-    });
-    panel2.add(btnCerrarSistema);
-    btnCerrarSistema.setBounds(730, 10, 50, 50);
-
     getContentPane().add(panel2);
     panel2.setBounds(275, 0, 950, 800);
 
@@ -532,10 +538,10 @@ public class VentanaRegistrarUsuario extends javax.swing.JDialog {
 
     }//GEN-LAST:event_listaNacionalidadItemStateChanged
 
-    private void btnCerrarSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSistemaActionPerformed
+    private void btnCerrarSistema1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSistema1ActionPerformed
         this.sistema.guardarDatosSistema();
         this.dispose();
-    }//GEN-LAST:event_btnCerrarSistemaActionPerformed
+    }//GEN-LAST:event_btnCerrarSistema1ActionPerformed
 
     void agregarRestriccionesUsuario(ArrayList<String> restricciones) {
         if (this.rdBtnCeliaco.isSelected()) {
@@ -571,7 +577,7 @@ public class VentanaRegistrarUsuario extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCerrarSistema;
+    private javax.swing.JButton btnCerrarSistema1;
     private javax.swing.JButton btnHome;
     private javax.swing.JButton btnIngresarFotoPerfil;
     private javax.swing.JButton btnIngresarUsuarioASistema;

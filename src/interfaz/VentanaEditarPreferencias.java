@@ -51,7 +51,6 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         rdBtnCarnesBlancas = new javax.swing.JRadioButton();
         btnEditarPreferencias = new javax.swing.JButton();
         lblEditarPreferencias = new javax.swing.JLabel();
-        btnCerrarSistema = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(508, 450));
@@ -177,20 +176,6 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         panelEditarPreferencias.add(lblEditarPreferencias);
         lblEditarPreferencias.setBounds(38, 11, 72, 71);
 
-        btnCerrarSistema.setBackground(new java.awt.Color(51, 51, 51));
-        btnCerrarSistema.setForeground(new java.awt.Color(51, 51, 51));
-        btnCerrarSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Close_Window_48px.png"))); // NOI18N
-        btnCerrarSistema.setBorderPainted(false);
-        btnCerrarSistema.setContentAreaFilled(false);
-        btnCerrarSistema.setFocusPainted(false);
-        btnCerrarSistema.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCerrarSistemaActionPerformed(evt);
-            }
-        });
-        panelEditarPreferencias.add(btnCerrarSistema);
-        btnCerrarSistema.setBounds(450, 10, 50, 50);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -239,11 +224,6 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_rdBtnVerdurasActionPerformed
 
-    private void btnCerrarSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSistemaActionPerformed
-        this.sistema.guardarDatosSistema();
-        this.dispose();
-    }//GEN-LAST:event_btnCerrarSistemaActionPerformed
-
     void agregarPreferenciasUsuario(ArrayList<String> preferencias) {
         if (this.rdBtnCarnesBlancas.isSelected()) {
             preferencias.add("Carnes Blancas");
@@ -262,7 +242,6 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCerrarSistema;
     private javax.swing.JButton btnEditarPreferencias;
     private javax.swing.JLabel lblEditar;
     private javax.swing.JLabel lblEditarPreferencias;

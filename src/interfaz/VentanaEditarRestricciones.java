@@ -50,7 +50,6 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
         panelListo = new javax.swing.JPanel();
         lblListo = new javax.swing.JLabel();
         lblIconoListo = new javax.swing.JLabel();
-        btnCerrarSistema = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(508, 390));
@@ -140,18 +139,6 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
 
         lblIconoListo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoOK.png"))); // NOI18N
 
-        btnCerrarSistema.setBackground(new java.awt.Color(51, 51, 51));
-        btnCerrarSistema.setForeground(new java.awt.Color(51, 51, 51));
-        btnCerrarSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Close_Window_48px.png"))); // NOI18N
-        btnCerrarSistema.setBorderPainted(false);
-        btnCerrarSistema.setContentAreaFilled(false);
-        btnCerrarSistema.setFocusPainted(false);
-        btnCerrarSistema.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCerrarSistemaActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelListoLayout = new javax.swing.GroupLayout(panelListo);
         panelListo.setLayout(panelListoLayout);
         panelListoLayout.setHorizontalGroup(
@@ -162,16 +149,11 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
                     .addComponent(lblListo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblIconoListo))
                 .addContainerGap(172, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelListoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnCerrarSistema, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
         panelListoLayout.setVerticalGroup(
             panelListoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelListoLayout.createSequentialGroup()
-                .addComponent(btnCerrarSistema, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(92, 92, 92)
                 .addComponent(lblIconoListo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblListo)
@@ -218,11 +200,6 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
         this.sistema.guardarDatosSistema();
     }//GEN-LAST:event_formWindowClosing
 
-    private void btnCerrarSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSistemaActionPerformed
-        this.sistema.guardarDatosSistema();
-        this.dispose();
-    }//GEN-LAST:event_btnCerrarSistemaActionPerformed
-
     void agregarRestriccionesUsuario(ArrayList<String> restricciones) {
         if (this.rdBtnCeliaco.isSelected()) {
             restricciones.add("Celíaco");
@@ -260,7 +237,6 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCerrarSistema;
     private javax.swing.JButton btnEditarPreferencias;
     private javax.swing.JLabel lblEditar;
     private javax.swing.JLabel lblEditarRestricciones;

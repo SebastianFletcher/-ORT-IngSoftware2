@@ -71,8 +71,8 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         btnIngresarAlimento = new javax.swing.JButton();
         lblIngresarAlimento = new javax.swing.JLabel();
         lblIngresarAlimento2 = new javax.swing.JLabel();
+        btnCerrarSistema2 = new javax.swing.JButton();
         panelDerecho = new javax.swing.JPanel();
-        btnCerrarSistema = new javax.swing.JButton();
         panelVacio = new javax.swing.JPanel();
         btnAyuda = new javax.swing.JButton();
         panelNoHayPlanesPendientes = new javax.swing.JPanel();
@@ -282,15 +282,28 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         lblIngresarAlimento2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblIngresarAlimento2.setText("al sistema");
 
+        btnCerrarSistema2.setBackground(new java.awt.Color(51, 51, 51));
+        btnCerrarSistema2.setForeground(new java.awt.Color(51, 51, 51));
+        btnCerrarSistema2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Close_Window_48px.png"))); // NOI18N
+        btnCerrarSistema2.setBorderPainted(false);
+        btnCerrarSistema2.setContentAreaFilled(false);
+        btnCerrarSistema2.setFocusPainted(false);
+        btnCerrarSistema2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        btnCerrarSistema2.setMaximumSize(new java.awt.Dimension(10, 10));
+        btnCerrarSistema2.setMinimumSize(new java.awt.Dimension(10, 10));
+        btnCerrarSistema2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnCerrarSistema2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSistema2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
         panelMenu.setLayout(panelMenuLayout);
         panelMenuLayout.setHorizontalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelMenuLayout.createSequentialGroup()
                 .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelMenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnHome))
                     .addGroup(panelMenuLayout.createSequentialGroup()
                         .addGap(77, 77, 77)
                         .addComponent(lblPlanesSolicitados2))
@@ -318,13 +331,21 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
                         .addComponent(btnConsultasPendientes, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(42, 42, 42))))
+            .addGroup(panelMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnHome)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCerrarSistema2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panelMenuLayout.setVerticalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelMenuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnHome)
-                .addGap(32, 32, 32)
+                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelMenuLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnHome))
+                    .addComponent(btnCerrarSistema2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
                 .addComponent(btnConsultasPendientes, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblConsultasPendientes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -349,21 +370,6 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         panelDerecho.setPreferredSize(new java.awt.Dimension(800, 800));
         panelDerecho.setLayout(new java.awt.CardLayout());
 
-        btnCerrarSistema.setBackground(new java.awt.Color(51, 51, 51));
-        btnCerrarSistema.setForeground(new java.awt.Color(51, 51, 51));
-        btnCerrarSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Close_Window_48px.png"))); // NOI18N
-        btnCerrarSistema.setBorderPainted(false);
-        btnCerrarSistema.setContentAreaFilled(false);
-        btnCerrarSistema.setFocusPainted(false);
-        btnCerrarSistema.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        btnCerrarSistema.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btnCerrarSistema.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCerrarSistemaActionPerformed(evt);
-            }
-        });
-        panelDerecho.add(btnCerrarSistema, "card10");
-
         panelVacio.setBackground(new java.awt.Color(51, 51, 51));
         panelVacio.setMaximumSize(new java.awt.Dimension(800, 800));
         panelVacio.setMinimumSize(new java.awt.Dimension(800, 800));
@@ -385,7 +391,7 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         panelVacioLayout.setHorizontalGroup(
             panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelVacioLayout.createSequentialGroup()
-                .addContainerGap(734, Short.MAX_VALUE)
+                .addContainerGap(708, Short.MAX_VALUE)
                 .addComponent(btnAyuda, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -1148,7 +1154,7 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
                 .addComponent(panelIzquierdo, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(panelPlanAlimentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPlanAlimentacionLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(panelPerfilDeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(panelPlanAlimentacionLayout.createSequentialGroup()
@@ -1199,7 +1205,7 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
                     .addGroup(panelAlimentroRegistradoCorrectamenteLayout.createSequentialGroup()
                         .addGap(310, 310, 310)
                         .addComponent(lblNoPlanes2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
         panelAlimentroRegistradoCorrectamenteLayout.setVerticalGroup(
             panelAlimentroRegistradoCorrectamenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1567,32 +1573,32 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
                 .addGap(27, 27, 27))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(366, Short.MAX_VALUE)
+                    .addContainerGap(466, Short.MAX_VALUE)
                     .addComponent(lblGlucidos)
                     .addGap(334, 334, 334)))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(376, Short.MAX_VALUE)
+                    .addContainerGap(476, Short.MAX_VALUE)
                     .addComponent(lblProteínas)
                     .addGap(324, 324, 324)))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(386, Short.MAX_VALUE)
+                    .addContainerGap(486, Short.MAX_VALUE)
                     .addComponent(lblMinerales)
                     .addGap(314, 314, 314)))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(396, Short.MAX_VALUE)
+                    .addContainerGap(496, Short.MAX_VALUE)
                     .addComponent(lblVitaminas)
                     .addGap(304, 304, 304)))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(406, Short.MAX_VALUE)
+                    .addContainerGap(506, Short.MAX_VALUE)
                     .addComponent(lblFibra)
                     .addGap(294, 294, 294)))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(416, Short.MAX_VALUE)
+                    .addContainerGap(516, Short.MAX_VALUE)
                     .addComponent(lblLipidos)
                     .addGap(284, 284, 284)))
         );
@@ -1683,32 +1689,32 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
                         .addGap(131, 131, 131))))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(491, Short.MAX_VALUE)
+                    .addContainerGap(579, Short.MAX_VALUE)
                     .addComponent(lblGlucidos)
                     .addGap(221, 221, 221)))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(501, Short.MAX_VALUE)
+                    .addContainerGap(589, Short.MAX_VALUE)
                     .addComponent(lblProteínas)
                     .addGap(211, 211, 211)))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(511, Short.MAX_VALUE)
+                    .addContainerGap(599, Short.MAX_VALUE)
                     .addComponent(lblMinerales)
                     .addGap(201, 201, 201)))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(521, Short.MAX_VALUE)
+                    .addContainerGap(609, Short.MAX_VALUE)
                     .addComponent(lblVitaminas)
                     .addGap(191, 191, 191)))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(531, Short.MAX_VALUE)
+                    .addContainerGap(619, Short.MAX_VALUE)
                     .addComponent(lblFibra)
                     .addGap(181, 181, 181)))
             .addGroup(panelIngresarAlimentoAlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresarAlimentoAlSistemaLayout.createSequentialGroup()
-                    .addContainerGap(541, Short.MAX_VALUE)
+                    .addContainerGap(629, Short.MAX_VALUE)
                     .addComponent(lblLipidos)
                     .addGap(171, 171, 171)))
         );
@@ -2303,10 +2309,10 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         ayuda.setVisible(true);
     }//GEN-LAST:event_btnAyudaActionPerformed
 
-    private void btnCerrarSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSistemaActionPerformed
+    private void btnCerrarSistema2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSistema2ActionPerformed
         this.sistema.guardarDatosSistema();
         this.dispose();
-    }//GEN-LAST:event_btnCerrarSistemaActionPerformed
+    }//GEN-LAST:event_btnCerrarSistema2ActionPerformed
 
     private void ocultarPaneles() {
         this.btnConsultasPendientes.setEnabled(true);
@@ -2435,7 +2441,7 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregarAlPlan;
     private javax.swing.JButton btnAyuda;
-    private javax.swing.JButton btnCerrarSistema;
+    private javax.swing.JButton btnCerrarSistema2;
     private javax.swing.JButton btnConsultasPendientes;
     private javax.swing.JButton btnElaborarPlan;
     private javax.swing.JButton btnElaborarPlan1;

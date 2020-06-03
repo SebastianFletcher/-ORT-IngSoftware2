@@ -36,6 +36,7 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
     private void initComponents() {
 
         panel1 = new javax.swing.JPanel();
+        btnCerrarSistema1 = new javax.swing.JButton();
         lblTituloVentana = new javax.swing.JLabel();
         icono = new javax.swing.JLabel();
         panel2 = new javax.swing.JPanel();
@@ -50,7 +51,6 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         btnAgregarProfesional = new javax.swing.JLabel();
         lblNombre1 = new javax.swing.JLabel();
         btnAgregarProfesional1 = new javax.swing.JLabel();
-        btnCerrarSistema = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1060, 800));
@@ -66,6 +66,22 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
 
         panel1.setBackground(new java.awt.Color(164, 211, 249));
 
+        btnCerrarSistema1.setBackground(new java.awt.Color(51, 51, 51));
+        btnCerrarSistema1.setForeground(new java.awt.Color(51, 51, 51));
+        btnCerrarSistema1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Close_Window_48px.png"))); // NOI18N
+        btnCerrarSistema1.setBorderPainted(false);
+        btnCerrarSistema1.setContentAreaFilled(false);
+        btnCerrarSistema1.setFocusPainted(false);
+        btnCerrarSistema1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        btnCerrarSistema1.setMaximumSize(new java.awt.Dimension(10, 10));
+        btnCerrarSistema1.setMinimumSize(new java.awt.Dimension(10, 10));
+        btnCerrarSistema1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnCerrarSistema1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSistema1ActionPerformed(evt);
+            }
+        });
+
         lblTituloVentana.setFont(new java.awt.Font("Segoe Script", 1, 50)); // NOI18N
         lblTituloVentana.setForeground(new java.awt.Color(0, 51, 153));
         lblTituloVentana.setText("Broccoli");
@@ -76,20 +92,23 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         panel1.setLayout(panel1Layout);
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addComponent(icono, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addComponent(lblTituloVentana, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))))
+                    .addComponent(lblTituloVentana, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(icono, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnCerrarSistema1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
-                .addGap(172, 172, 172)
+                .addComponent(btnCerrarSistema1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(112, 112, 112)
                 .addComponent(lblTituloVentana, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(icono, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -117,7 +136,7 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         lblNombre.setForeground(new java.awt.Color(255, 255, 255));
         lblNombre.setText("Profesional");
         panel2.add(lblNombre);
-        lblNombre.setBounds(450, 200, 181, 38);
+        lblNombre.setBounds(450, 200, 181, 36);
 
         listaUsuariosVentana.setBackground(new java.awt.Color(51, 51, 51));
         listaUsuariosVentana.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
@@ -168,7 +187,7 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         lblNombre1.setForeground(new java.awt.Color(255, 255, 255));
         lblNombre1.setText("Usuario");
         panel2.add(lblNombre1);
-        lblNombre1.setBounds(90, 200, 181, 38);
+        lblNombre1.setBounds(90, 200, 181, 36);
 
         btnAgregarProfesional1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoAgregarProfesional.png"))); // NOI18N
         btnAgregarProfesional1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -178,21 +197,6 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         });
         panel2.add(btnAgregarProfesional1);
         btnAgregarProfesional1.setBounds(510, 600, 100, 90);
-
-        btnCerrarSistema.setBackground(new java.awt.Color(51, 51, 51));
-        btnCerrarSistema.setForeground(new java.awt.Color(51, 51, 51));
-        btnCerrarSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Close_Window_48px.png"))); // NOI18N
-        btnCerrarSistema.setBorderPainted(false);
-        btnCerrarSistema.setContentAreaFilled(false);
-        btnCerrarSistema.setFocusPainted(false);
-        btnCerrarSistema.setOpaque(false);
-        btnCerrarSistema.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCerrarSistemaActionPerformed(evt);
-            }
-        });
-        panel2.add(btnCerrarSistema);
-        btnCerrarSistema.setBounds(730, 10, 50, 50);
 
         getContentPane().add(panel2);
         panel2.setBounds(275, 0, 950, 800);
@@ -236,17 +240,17 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         ventanaRegProfesional.setVisible(true);
     }//GEN-LAST:event_btnAgregarProfesional1MouseClicked
 
-    private void btnCerrarSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSistemaActionPerformed
+    private void btnCerrarSistema1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSistema1ActionPerformed
         this.sistema.guardarDatosSistema();
         this.dispose();
-    }//GEN-LAST:event_btnCerrarSistemaActionPerformed
+    }//GEN-LAST:event_btnCerrarSistema1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel btnAgregarProfesional;
     private javax.swing.JLabel btnAgregarProfesional1;
     private javax.swing.JLabel btnAgregarUsuario;
-    private javax.swing.JButton btnCerrarSistema;
+    private javax.swing.JButton btnCerrarSistema1;
     private javax.swing.JLabel icono;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

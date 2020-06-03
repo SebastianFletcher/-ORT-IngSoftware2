@@ -74,10 +74,6 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnHome" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                           <Component id="lblPlanesSolicitados2" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -116,14 +112,25 @@
                       </Group>
                   </Group>
               </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btnHome" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnCerrarSistema2" min="-2" max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnHome" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnHome" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="btnCerrarSistema2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="btnConsultasPendientes" min="-2" pref="108" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="lblConsultasPendientes" min="-2" pref="28" max="-2" attributes="0"/>
@@ -261,6 +268,33 @@
             <Property name="text" type="java.lang.String" value="al sistema"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="btnCerrarSistema2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Imagenes/icons8_Close_Window_48px.png"/>
+            </Property>
+            <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
+            <Property name="focusPainted" type="boolean" value="false"/>
+            <Property name="horizontalAlignment" type="int" value="4"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 10]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[10, 10]"/>
+            </Property>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCerrarSistema2ActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="panelDerecho">
@@ -281,32 +315,6 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btnCerrarSistema">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="33" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="33" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/icons8_Close_Window_48px.png"/>
-            </Property>
-            <Property name="borderPainted" type="boolean" value="false"/>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
-            <Property name="focusPainted" type="boolean" value="false"/>
-            <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="verticalAlignment" type="int" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCerrarSistemaActionPerformed"/>
-          </Events>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card10"/>
-            </Constraint>
-          </Constraints>
-        </Component>
         <Container class="javax.swing.JPanel" name="panelVacio">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -329,7 +337,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace pref="734" max="32767" attributes="0"/>
+                      <EmptySpace pref="708" max="32767" attributes="0"/>
                       <Component id="btnAyuda" min="-2" pref="86" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1482,7 +1490,7 @@
                       <Component id="panelIzquierdo" min="-2" pref="227" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace pref="15" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="panelPerfilDeUsuario" min="-2" pref="561" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -2005,7 +2013,7 @@
                                   <Component id="lblNoPlanes2" min="-2" pref="137" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="237" max="32767" attributes="0"/>
+                          <EmptySpace pref="208" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2165,42 +2173,42 @@
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="366" max="32767" attributes="0"/>
+                              <EmptySpace pref="466" max="32767" attributes="0"/>
                               <Component id="lblGlucidos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="334" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="376" max="32767" attributes="0"/>
+                              <EmptySpace pref="476" max="32767" attributes="0"/>
                               <Component id="lblProteínas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="324" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="386" max="32767" attributes="0"/>
+                              <EmptySpace pref="486" max="32767" attributes="0"/>
                               <Component id="lblMinerales" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="314" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="396" max="32767" attributes="0"/>
+                              <EmptySpace pref="496" max="32767" attributes="0"/>
                               <Component id="lblVitaminas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="406" max="32767" attributes="0"/>
+                              <EmptySpace pref="506" max="32767" attributes="0"/>
                               <Component id="lblFibra" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="294" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="416" max="32767" attributes="0"/>
+                              <EmptySpace pref="516" max="32767" attributes="0"/>
                               <Component id="lblLipidos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="284" max="-2" attributes="0"/>
                           </Group>
@@ -2324,42 +2332,42 @@
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="491" max="32767" attributes="0"/>
+                              <EmptySpace pref="579" max="32767" attributes="0"/>
                               <Component id="lblGlucidos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="501" max="32767" attributes="0"/>
+                              <EmptySpace pref="589" max="32767" attributes="0"/>
                               <Component id="lblProteínas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="511" max="32767" attributes="0"/>
+                              <EmptySpace pref="599" max="32767" attributes="0"/>
                               <Component id="lblMinerales" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="521" max="32767" attributes="0"/>
+                              <EmptySpace pref="609" max="32767" attributes="0"/>
                               <Component id="lblVitaminas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="531" max="32767" attributes="0"/>
+                              <EmptySpace pref="619" max="32767" attributes="0"/>
                               <Component id="lblFibra" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="541" max="32767" attributes="0"/>
+                              <EmptySpace pref="629" max="32767" attributes="0"/>
                               <Component id="lblLipidos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
                           </Group>
