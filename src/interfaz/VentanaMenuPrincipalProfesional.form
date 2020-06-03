@@ -2089,22 +2089,22 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                                   <Component id="lblPrincipalesNutrientes" min="-2" pref="509" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="256" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="lblHidratos" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel2" alignment="0" min="-2" pref="457" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="checkHidratos" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="txtHidratos" min="-2" pref="163" max="-2" attributes="0"/>
+                                      </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                           <Component id="lblIconoNuevoAlimento" min="-2" pref="100" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="lblNuevoAlimento" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
-                                          <Component id="lblDatosIncorrectos" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                          <Component id="btnIngresarAlimentoASistema" min="-2" pref="89" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -2132,90 +2132,75 @@
                                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                           <Component id="btnIngresarFotoAlimento" min="-2" pref="124" max="-2" attributes="0"/>
                                       </Group>
-                                  </Group>
-                                  <EmptySpace min="0" pref="145" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="8" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jLabel2" min="-2" pref="457" max="-2" attributes="0"/>
-                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                  <Component id="checkProteínas" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="checkLipidos" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
+                                          <Component id="lblDatosIncorrectos" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnIngresarAlimentoASistema" min="-2" pref="89" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="checkProteínas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="checkVitaminas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="checkGlucidos" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                                              <Component id="checkMinerales" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="checkFibra" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="checkLipidos" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="checkHidratos" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="checkVitaminas" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="checkGlucidos" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="checkMinerales" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="checkFibra" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="txtLipidos" min="-2" pref="163" max="-2" attributes="0"/>
+                                              <Component id="txtFibra" min="-2" pref="163" max="-2" attributes="0"/>
+                                              <Component id="txtMinerales" min="-2" pref="163" max="-2" attributes="0"/>
+                                              <Component id="txtGlucidos" min="-2" pref="163" max="-2" attributes="0"/>
+                                              <Component id="txtVitaminas" min="-2" pref="163" max="-2" attributes="0"/>
+                                              <Component id="txtProteínas" min="-2" pref="163" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txtFibra" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
-                                          <Component id="txtMinerales" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
-                                          <Component id="txtGlucidos" min="-2" pref="163" max="-2" attributes="0"/>
-                                          <Component id="txtVitaminas" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
-                                          <Component id="txtHidratos" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
-                                          <Component id="txtProteínas" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
-                                          <Component id="txtLipidos" min="-2" pref="163" max="-2" attributes="0"/>
-                                      </Group>
                                   </Group>
+                                  <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="466" max="32767" attributes="0"/>
+                              <EmptySpace pref="366" max="32767" attributes="0"/>
                               <Component id="lblGlucidos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="334" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="476" max="32767" attributes="0"/>
+                              <EmptySpace pref="376" max="32767" attributes="0"/>
                               <Component id="lblProteínas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="324" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="486" max="32767" attributes="0"/>
+                              <EmptySpace pref="386" max="32767" attributes="0"/>
                               <Component id="lblMinerales" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="314" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="496" max="32767" attributes="0"/>
+                              <EmptySpace pref="396" max="32767" attributes="0"/>
                               <Component id="lblVitaminas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="506" max="32767" attributes="0"/>
+                              <EmptySpace pref="406" max="32767" attributes="0"/>
                               <Component id="lblFibra" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="294" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="516" max="32767" attributes="0"/>
+                              <EmptySpace pref="416" max="32767" attributes="0"/>
                               <Component id="lblLipidos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="284" max="-2" attributes="0"/>
                           </Group>
@@ -2240,7 +2225,7 @@
                                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="63" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="lblValidarNombre" min="-2" pref="44" max="-2" attributes="0"/>
                                       <Component id="lblNombreVacio" min="-2" pref="38" max="-2" attributes="0"/>
@@ -2267,107 +2252,98 @@
                               </Group>
                           </Group>
                           <Component id="lblPrincipalesNutrientes" min="-2" pref="41" max="-2" attributes="0"/>
-                          <EmptySpace pref="38" max="32767" attributes="0"/>
+                          <EmptySpace pref="14" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="lblHidratos" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel2" min="-2" pref="27" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="checkHidratos" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtHidratos" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="checkProteínas" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtProteínas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txtVitaminas" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="checkVitaminas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtVitaminas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txtGlucidos" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="checkGlucidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtGlucidos" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtMinerales" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txtFibra" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="checkMinerales" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="checkFibra" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="checkMinerales" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtMinerales" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                          <Component id="txtLipidos" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="checkLipidos" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="checkFibra" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtFibra" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="checkLipidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtLipidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Component id="lblDatosIncorrectos" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
                           <Component id="btnIngresarFotoAlimento" min="-2" pref="117" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="270" max="-2" attributes="0"/>
                           <Component id="btnIngresarAlimentoASistema" min="-2" pref="94" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="579" max="32767" attributes="0"/>
+                              <EmptySpace pref="479" max="32767" attributes="0"/>
                               <Component id="lblGlucidos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="589" max="32767" attributes="0"/>
+                              <EmptySpace pref="489" max="32767" attributes="0"/>
                               <Component id="lblProteínas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="599" max="32767" attributes="0"/>
+                              <EmptySpace pref="499" max="32767" attributes="0"/>
                               <Component id="lblMinerales" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="609" max="32767" attributes="0"/>
+                              <EmptySpace pref="509" max="32767" attributes="0"/>
                               <Component id="lblVitaminas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="619" max="32767" attributes="0"/>
+                              <EmptySpace pref="519" max="32767" attributes="0"/>
                               <Component id="lblFibra" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="629" max="32767" attributes="0"/>
+                              <EmptySpace pref="529" max="32767" attributes="0"/>
                               <Component id="lblLipidos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
                           </Group>
