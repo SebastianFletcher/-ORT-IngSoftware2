@@ -122,25 +122,24 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         panel2.setForeground(new java.awt.Color(51, 51, 51));
         panel2.setLayout(null);
 
-        lblNuevoUsuario.setFont(new java.awt.Font("Levenim MT", 0, 65)); // NOI18N
+        lblNuevoUsuario.setFont(new java.awt.Font("Levenim MT", 0, 36)); // NOI18N
         lblNuevoUsuario.setForeground(new java.awt.Color(255, 255, 255));
         lblNuevoUsuario.setText("Inicio de Sesión");
         panel2.add(lblNuevoUsuario);
-        lblNuevoUsuario.setBounds(203, 36, 530, 91);
+        lblNuevoUsuario.setBounds(280, 40, 530, 91);
 
         lblIconoNuevoUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fotoDeUsuarioStandard.png"))); // NOI18N
         panel2.add(lblIconoNuevoUsuario);
-        lblIconoNuevoUsuario.setBounds(85, 27, 100, 100);
+        lblIconoNuevoUsuario.setBounds(180, 40, 100, 100);
 
-        lblNombre.setFont(new java.awt.Font("Century Gothic", 0, 30)); // NOI18N
+        lblNombre.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
         lblNombre.setForeground(new java.awt.Color(255, 255, 255));
         lblNombre.setText("Profesional");
         panel2.add(lblNombre);
-        lblNombre.setBounds(450, 200, 181, 36);
+        lblNombre.setBounds(470, 200, 181, 36);
 
-        listaUsuariosVentana.setBackground(new java.awt.Color(51, 51, 51));
+        listaUsuariosVentana.setBackground(new java.awt.Color(238, 238, 238));
         listaUsuariosVentana.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
-        listaUsuariosVentana.setForeground(new java.awt.Color(255, 255, 255));
         listaUsuariosVentana.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         listaUsuariosVentana.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -152,9 +151,8 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         panel2.add(jScrollPane2);
         jScrollPane2.setBounds(80, 250, 230, 330);
 
-        listaProfesionalesVentana.setBackground(new java.awt.Color(51, 51, 51));
+        listaProfesionalesVentana.setBackground(new java.awt.Color(238, 238, 238));
         listaProfesionalesVentana.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
-        listaProfesionalesVentana.setForeground(new java.awt.Color(255, 255, 255));
         listaProfesionalesVentana.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
                 listaProfesionalesVentanaValueChanged(evt);
@@ -183,11 +181,11 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         panel2.add(btnAgregarProfesional);
         btnAgregarProfesional.setBounds(570, 640, 50, 80);
 
-        lblNombre1.setFont(new java.awt.Font("Century Gothic", 0, 30)); // NOI18N
+        lblNombre1.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
         lblNombre1.setForeground(new java.awt.Color(255, 255, 255));
         lblNombre1.setText("Usuario");
         panel2.add(lblNombre1);
-        lblNombre1.setBounds(90, 200, 181, 36);
+        lblNombre1.setBounds(140, 200, 181, 36);
 
         btnAgregarProfesional1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoAgregarProfesional.png"))); // NOI18N
         btnAgregarProfesional1.addMouseListener(new java.awt.event.MouseAdapter() {

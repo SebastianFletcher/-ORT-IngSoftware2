@@ -105,14 +105,14 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         panelEditarPreferencias.add(lblEditar);
         lblEditar.setBounds(120, 20, 173, 62);
 
-        lblTxtPreferencias.setFont(new java.awt.Font("Century Gothic", 0, 30)); // NOI18N
+        lblTxtPreferencias.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
         lblTxtPreferencias.setForeground(new java.awt.Color(255, 255, 255));
         lblTxtPreferencias.setText("Preferencias");
         panelEditarPreferencias.add(lblTxtPreferencias);
-        lblTxtPreferencias.setBounds(70, 100, 265, 36);
+        lblTxtPreferencias.setBounds(100, 120, 160, 36);
 
         rdBtnVerduras.setBackground(new java.awt.Color(51, 51, 51));
-        rdBtnVerduras.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        rdBtnVerduras.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnVerduras.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnVerduras.setText("Preferencia 3");
         rdBtnVerduras.addActionListener(new java.awt.event.ActionListener() {
@@ -121,10 +121,10 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
             }
         });
         panelEditarPreferencias.add(rdBtnVerduras);
-        rdBtnVerduras.setBounds(100, 230, 250, 30);
+        rdBtnVerduras.setBounds(100, 230, 250, 27);
 
         rdBtnHarinas.setBackground(new java.awt.Color(51, 51, 51));
-        rdBtnHarinas.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        rdBtnHarinas.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnHarinas.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnHarinas.setText("Preferencia 5");
         rdBtnHarinas.addActionListener(new java.awt.event.ActionListener() {
@@ -133,17 +133,17 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
             }
         });
         panelEditarPreferencias.add(rdBtnHarinas);
-        rdBtnHarinas.setBounds(100, 310, 200, 30);
+        rdBtnHarinas.setBounds(100, 310, 200, 27);
 
         rdBtnFrutas.setBackground(new java.awt.Color(51, 51, 51));
-        rdBtnFrutas.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        rdBtnFrutas.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnFrutas.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnFrutas.setText("Preferencia 4");
         panelEditarPreferencias.add(rdBtnFrutas);
-        rdBtnFrutas.setBounds(100, 270, 240, 30);
+        rdBtnFrutas.setBounds(100, 270, 240, 27);
 
         rdBtnCarnesRojas.setBackground(new java.awt.Color(51, 51, 51));
-        rdBtnCarnesRojas.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        rdBtnCarnesRojas.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnCarnesRojas.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnCarnesRojas.setText("Preferencia 1");
         rdBtnCarnesRojas.addActionListener(new java.awt.event.ActionListener() {
@@ -152,14 +152,14 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
             }
         });
         panelEditarPreferencias.add(rdBtnCarnesRojas);
-        rdBtnCarnesRojas.setBounds(100, 160, 240, 30);
+        rdBtnCarnesRojas.setBounds(100, 160, 240, 27);
 
         rdBtnCarnesBlancas.setBackground(new java.awt.Color(51, 51, 51));
-        rdBtnCarnesBlancas.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        rdBtnCarnesBlancas.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnCarnesBlancas.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnCarnesBlancas.setText("Preferencia 2");
         panelEditarPreferencias.add(rdBtnCarnesBlancas);
-        rdBtnCarnesBlancas.setBounds(100, 190, 240, 30);
+        rdBtnCarnesBlancas.setBounds(100, 190, 240, 27);
 
         btnEditarPreferencias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoOkEditar.png"))); // NOI18N
         btnEditarPreferencias.setBorderPainted(false);

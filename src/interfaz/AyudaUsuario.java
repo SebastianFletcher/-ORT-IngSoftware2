@@ -55,11 +55,11 @@ public class AyudaUsuario extends javax.swing.JDialog {
         jPanel1.setPreferredSize(new java.awt.Dimension(600, 600));
         jPanel1.setLayout(null);
 
-        lblNombreUsuario.setFont(new java.awt.Font("Levenim MT", 0, 55)); // NOI18N
+        lblNombreUsuario.setFont(new java.awt.Font("Levenim MT", 0, 36)); // NOI18N
         lblNombreUsuario.setForeground(new java.awt.Color(255, 255, 255));
         lblNombreUsuario.setText("Ayuda");
         jPanel1.add(lblNombreUsuario);
-        lblNombreUsuario.setBounds(203, 27, 192, 66);
+        lblNombreUsuario.setBounds(230, 20, 192, 66);
 
         btnIngresarAlimentoIngerido.setForeground(new java.awt.Color(255, 255, 255));
         btnIngresarAlimentoIngerido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Chat_70px.png"))); // NOI18N

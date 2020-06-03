@@ -78,34 +78,39 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
         panelEditarRestricciones.add(btnEditarPreferencias);
         btnEditarPreferencias.setBounds(320, 280, 76, 72);
 
-        lblEditar.setFont(new java.awt.Font("Levenim MT", 0, 50)); // NOI18N
+        lblEditar.setFont(new java.awt.Font("Levenim MT", 0, 36)); // NOI18N
         lblEditar.setForeground(new java.awt.Color(255, 255, 255));
         lblEditar.setText("Editar");
         panelEditarRestricciones.add(lblEditar);
-        lblEditar.setBounds(110, 20, 139, 60);
+        lblEditar.setBounds(110, 20, 101, 43);
 
-        lblTxtRestricciones.setFont(new java.awt.Font("Century Gothic", 0, 30)); // NOI18N
+        lblTxtRestricciones.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
         lblTxtRestricciones.setForeground(new java.awt.Color(255, 255, 255));
         lblTxtRestricciones.setText("Restricciones");
         panelEditarRestricciones.add(lblTxtRestricciones);
-        lblTxtRestricciones.setBounds(60, 100, 208, 36);
+        lblTxtRestricciones.setBounds(60, 100, 208, 30);
 
         rdBtnCeliaco.setBackground(new java.awt.Color(51, 51, 51));
-        rdBtnCeliaco.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        rdBtnCeliaco.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnCeliaco.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnCeliaco.setText("Restriccion 4");
+        rdBtnCeliaco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdBtnCeliacoActionPerformed(evt);
+            }
+        });
         panelEditarRestricciones.add(rdBtnCeliaco);
-        rdBtnCeliaco.setBounds(80, 270, 210, 30);
+        rdBtnCeliaco.setBounds(80, 270, 210, 27);
 
         rdBtnDiabetes.setBackground(new java.awt.Color(51, 51, 51));
-        rdBtnDiabetes.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        rdBtnDiabetes.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnDiabetes.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnDiabetes.setText("Restriccion 1");
         panelEditarRestricciones.add(rdBtnDiabetes);
-        rdBtnDiabetes.setBounds(80, 150, 230, 30);
+        rdBtnDiabetes.setBounds(80, 150, 230, 27);
 
         rdBtnVegano.setBackground(new java.awt.Color(51, 51, 51));
-        rdBtnVegano.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        rdBtnVegano.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnVegano.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnVegano.setText("Restriccion 2");
         rdBtnVegano.addActionListener(new java.awt.event.ActionListener() {
@@ -114,15 +119,15 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
             }
         });
         panelEditarRestricciones.add(rdBtnVegano);
-        rdBtnVegano.setBounds(80, 190, 250, 30);
+        rdBtnVegano.setBounds(80, 190, 250, 27);
 
         rdBtnIntoleranteLactosa.setBackground(new java.awt.Color(51, 51, 51));
-        rdBtnIntoleranteLactosa.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        rdBtnIntoleranteLactosa.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnIntoleranteLactosa.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnIntoleranteLactosa.setText("Restriccion 3");
         rdBtnIntoleranteLactosa.setActionCommand("");
         panelEditarRestricciones.add(rdBtnIntoleranteLactosa);
-        rdBtnIntoleranteLactosa.setBounds(80, 230, 290, 30);
+        rdBtnIntoleranteLactosa.setBounds(80, 230, 290, 27);
 
         lblEditarRestricciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoEditarRestricciones.png"))); // NOI18N
         panelEditarRestricciones.add(lblEditarRestricciones);
@@ -133,7 +138,7 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
         panelListo.setMinimumSize(new java.awt.Dimension(508, 390));
         panelListo.setPreferredSize(new java.awt.Dimension(508, 390));
 
-        lblListo.setFont(new java.awt.Font("Century Gothic", 1, 40)); // NOI18N
+        lblListo.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         lblListo.setForeground(new java.awt.Color(255, 255, 255));
         lblListo.setText("Listo!");
 
@@ -145,10 +150,12 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
             panelListoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelListoLayout.createSequentialGroup()
                 .addGap(196, 196, 196)
-                .addGroup(panelListoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblListo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblIconoListo))
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addComponent(lblIconoListo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelListoLayout.createSequentialGroup()
+                .addContainerGap(135, Short.MAX_VALUE)
+                .addComponent(lblListo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(157, 157, 157))
         );
         panelListoLayout.setVerticalGroup(
             panelListoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,28 +164,21 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
                 .addComponent(lblIconoListo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblListo)
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        panelEditarRestricciones.add(panelListo);
+        panelListo.setBounds(40, 30, 432, 352);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelEditarRestricciones, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(panelListo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelEditarRestricciones, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(panelListo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -199,6 +199,10 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         this.sistema.guardarDatosSistema();
     }//GEN-LAST:event_formWindowClosing
+
+    private void rdBtnCeliacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdBtnCeliacoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdBtnCeliacoActionPerformed
 
     void agregarRestriccionesUsuario(ArrayList<String> restricciones) {
         if (this.rdBtnCeliaco.isSelected()) {
