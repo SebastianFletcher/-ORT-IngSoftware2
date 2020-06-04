@@ -600,6 +600,9 @@
               <Image iconType="3" name="/Imagenes/agregarFotoUsuario.png"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[640, 160, 120, 120]"/>
+            </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
