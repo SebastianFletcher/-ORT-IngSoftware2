@@ -75,7 +75,26 @@ public abstract class Persona implements Serializable {
 
     @Override
     public boolean equals(Object obj) {
+        
+        if(obj == null)
+            return false;
+        
+        if(obj.getClass() != this.getClass())
+            return false;
+        
         Persona otraPersona = (Persona) obj;
         return this.getNombreCompleto().equals(otraPersona.getNombreCompleto());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+
+        result = 31 * result + nombre.hashCode();
+        result = 31 * result + apellido.hashCode();
+        result = 31 * result + fechaNacimiento.hashCode();
+        result = 31 * result + fotoDePerfil.hashCode();
+
+        return result;
     }
 }

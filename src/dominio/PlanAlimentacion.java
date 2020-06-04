@@ -74,10 +74,33 @@ public final class PlanAlimentacion implements Serializable {
 
     @Override
     public boolean equals(Object obj) {
+        
+        if(obj == null)
+            return false;
+        
+        if(obj.getClass() != this.getClass())
+            return false;
+        
         PlanAlimentacion otroPlanAlimentacion = (PlanAlimentacion) obj;
         return (this.getNombreDelPlan().equals(otroPlanAlimentacion.getNombreDelPlan())
                 && this.getUsuario().equals(otroPlanAlimentacion.getUsuario())
                 && this.getProfesional().equals(otroPlanAlimentacion.getProfesional()));
+    }
+    
+    @Override
+    public int hashCode() {
+        int result = 17;
+
+        result = 31 * result + nombreDelPlan.hashCode();
+        result = 31 * result + usuario.hashCode();
+        result = 31 * result + profesional.hashCode();
+        result = 31 * result + (fueAtendidoElPlan ? 1 : 0);
+        
+        for(int mes = 0; mes < planDiaADia.length; mes++)
+            for(int dia = 0; dia < planDiaADia[mes].length; dia++ )
+                result = 31 * result + planDiaADia[mes][dia].hashCode();
+
+        return result;
     }
 
 }

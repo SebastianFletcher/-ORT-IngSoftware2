@@ -48,10 +48,28 @@ public final class Ingesta implements Serializable {
 
     @Override
     public boolean equals(Object obj) {
+        
+        if(obj == null)
+            return false;
+        
+        if(obj.getClass() != this.getClass())
+            return false;
+        
         Ingesta otraIngesta = (Ingesta) obj;
-        boolean sonIguales = this.getFechaDeIngesta().equals(otraIngesta.getFechaDeIngesta());
-        sonIguales = sonIguales && this.getListaAlimentosPorFecha().equals(otraIngesta.getListaAlimentosPorFecha());
-        return sonIguales;
+        return this.getFechaDeIngesta().equals(otraIngesta.getFechaDeIngesta()) && 
+                this.getListaAlimentosPorFecha().equals(otraIngesta.getListaAlimentosPorFecha());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+
+        result = 31 * result + fechaDeIngesta.hashCode();
+        
+        for(Alimento aliemento : listaAlimentosPorFecha)
+            result = 31 * result + aliemento.hashCode();
+        
+        return result;
     }
 
 }

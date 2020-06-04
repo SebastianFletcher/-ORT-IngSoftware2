@@ -72,13 +72,6 @@ public class Conversacion implements Serializable {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        final Conversacion conversacionParametro = (Conversacion) obj;
-        return getProfesional().equals(conversacionParametro.getProfesional())
-                && getUsuario().equals(conversacionParametro.getUsuario());
-    }
-
-    @Override
     public String toString() {
         String retorno = "No hay mensajes para mostrar";
         if (!getListaMensajes().isEmpty()) {
@@ -88,5 +81,33 @@ public class Conversacion implements Serializable {
         }
         return retorno;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        
+        if(obj == null)
+            return false;
+        
+        if(obj.getClass() != this.getClass())
+            return false;
+        
+        Conversacion conversacionParametro = (Conversacion) obj;
+         return getProfesional().equals(conversacionParametro.getProfesional())
+                && getUsuario().equals(conversacionParametro.getUsuario());
+    }
 
+    @Override
+    public int hashCode() {
+        int result = 17;
+
+        result = 31 * result + usuario.hashCode();
+        result = 31 * result + profesional.hashCode();
+        result = 31 * result + (fueAtendidaConsulta ? 1 : 0);
+        
+        for(InformacionMensaje mensaje : listaMensajes)
+            result = 31 * result + mensaje.hashCode();
+        
+        return result;
+    }
+    
 }

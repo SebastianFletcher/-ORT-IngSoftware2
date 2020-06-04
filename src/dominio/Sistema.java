@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 
 public final class Sistema implements Serializable {
@@ -167,16 +169,37 @@ public final class Sistema implements Serializable {
     }
 
     public void guardarDatosSistema() {
+        ObjectOutputStream objetoASerializar = null;
+        FileOutputStream archivo = null;
+        
         try {
-            FileOutputStream archivo = new FileOutputStream("Sistema.data");
+            archivo = new FileOutputStream("Sistema.data");
             BufferedOutputStream buffer = new BufferedOutputStream(archivo);
-            try (ObjectOutputStream objetoASerializar = new ObjectOutputStream(buffer)) {
-                objetoASerializar.writeObject(this);
-                objetoASerializar.flush();
+            
+            objetoASerializar = new ObjectOutputStream(buffer);
+            objetoASerializar.writeObject(this);
+            objetoASerializar.flush();
+            
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }            
+        finally
+        {
+            try {
+                if(objetoASerializar != null)
+                    objetoASerializar.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } catch (IOException e) {
-
+            
+            try {
+                if(archivo != null)
+                    archivo.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
+
     }
 
     public boolean crearUsuario(String nombre, String apellido, String fechaNacimiento, ImageIcon fotoDePerfil, String nacionalidad, ArrayList<String> preferencias, ArrayList<String> restricciones, ArrayList<Ingesta> alimentosIngeridos) {

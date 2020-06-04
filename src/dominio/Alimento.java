@@ -77,8 +77,29 @@ public final class Alimento implements Serializable {
 
     @Override
     public boolean equals(Object obj) {
+        
+        if(obj == null)
+            return false;
+        
+        if(obj.getClass() != this.getClass())
+            return false;
+        
         Alimento otroAlimento = (Alimento) obj;
         return (this.getNombre().equals(otroAlimento.getNombre()));
     }
 
+    @Override
+    public int hashCode() {
+        int result = 17;
+
+        result = 31 * result + nombre.hashCode();
+        result = 31 * result + tipoAlimento.hashCode();
+        result = 31 * result + fotoDelAlimento.hashCode();
+        result = 31 * result + nombre.hashCode();
+        
+        for(ComposicionAlimento compAlimento : listaNutrientesConProporcion)
+            result = 31 * result + compAlimento.hashCode();
+        
+        return result;
+    }
 }
