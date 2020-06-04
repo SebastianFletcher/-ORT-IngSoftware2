@@ -16,6 +16,9 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         this.sistema = unSistema;
         this.listaUsuariosVentana.setListData(sistema.getListaUsuarios().toArray());
         this.listaProfesionalesVentana.setListData(sistema.getListaProfesionales().toArray());
+        
+        lblNoUsuario.setVisible(sistema.getListaUsuarios().size() <1);
+        lblNoProfesional.setVisible(sistema.getListaProfesionales().size() <1);
     }
 
     public Image getIconImage() {
@@ -43,6 +46,8 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         lblNuevoUsuario = new javax.swing.JLabel();
         lblIconoNuevoUsuario = new javax.swing.JLabel();
         lblNombre = new javax.swing.JLabel();
+        lblNoProfesional = new javax.swing.JLabel();
+        lblNoUsuario = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         listaUsuariosVentana = new javax.swing.JList();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -138,6 +143,16 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         panel2.add(lblNombre);
         lblNombre.setBounds(470, 200, 181, 36);
 
+        lblNoProfesional.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        lblNoProfesional.setText("No hay profesionales registrados");
+        panel2.add(lblNoProfesional);
+        lblNoProfesional.setBounds(440, 260, 240, 17);
+
+        lblNoUsuario.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        lblNoUsuario.setText("No hay usuarios registrados");
+        panel2.add(lblNoUsuario);
+        lblNoUsuario.setBounds(90, 260, 210, 17);
+
         listaUsuariosVentana.setBackground(new java.awt.Color(238, 238, 238));
         listaUsuariosVentana.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
         listaUsuariosVentana.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
@@ -149,7 +164,7 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         jScrollPane2.setViewportView(listaUsuariosVentana);
 
         panel2.add(jScrollPane2);
-        jScrollPane2.setBounds(80, 250, 230, 330);
+        jScrollPane2.setBounds(80, 250, 250, 330);
 
         listaProfesionalesVentana.setBackground(new java.awt.Color(238, 238, 238));
         listaProfesionalesVentana.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
@@ -161,7 +176,7 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
         jScrollPane1.setViewportView(listaProfesionalesVentana);
 
         panel2.add(jScrollPane1);
-        jScrollPane1.setBounds(430, 250, 230, 330);
+        jScrollPane1.setBounds(430, 250, 250, 330);
 
         btnAgregarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoAgregarUsuario.png"))); // NOI18N
         btnAgregarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -253,6 +268,8 @@ public class VentanaMenuPrincipal extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblIconoNuevoUsuario;
+    private javax.swing.JLabel lblNoProfesional;
+    private javax.swing.JLabel lblNoUsuario;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblNombre1;
     private javax.swing.JLabel lblNuevoUsuario;
