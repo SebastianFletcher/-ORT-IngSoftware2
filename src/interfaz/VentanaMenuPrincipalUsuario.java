@@ -39,6 +39,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         Calendar fecha = new GregorianCalendar();
         this.fechaIngestaUsuario.setMaxDate(fecha);
         this.fechaIngestaUsuario.setSelectedDate(fecha);
+        this.fechaIngestaUsuario.getCurrent().setTime(fecha.getTime());
         this.panelVacio.setVisible(true);
     }
 
@@ -1214,6 +1215,11 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         ocultarPaneles();
         this.btnIngresarAlimentoIngerido.setEnabled(false);
         if (this.sistema.getListaAlimentos().size() > 0) {
+            
+            Calendar fecha = new GregorianCalendar();
+            this.fechaIngestaUsuario.setSelectedDate(fecha);
+            this.fechaIngestaUsuario.getCurrent().setTime(fecha.getTime());
+            
             this.btnIngresarAlimentoIngerido.setEnabled(false);
             this.panelAlimentoIngerido.setVisible(true);
             ArrayList<Alimento> lstAlimentos = this.sistema.getListaAlimentos();
