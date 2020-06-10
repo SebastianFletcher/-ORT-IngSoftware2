@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class Conversacion implements Serializable {
 
     private ArrayList<InformacionMensaje> listaMensajes;
-    public Persona usuario;
-    public Persona profesional;
+    private Persona usuario;
+    private Persona profesional;
     private boolean fueAtendidaConsulta;
 
     public Conversacion(Persona unUsuario, Persona unProfesional, ArrayList<InformacionMensaje> listaMensajes) {

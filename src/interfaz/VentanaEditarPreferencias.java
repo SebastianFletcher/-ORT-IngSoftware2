@@ -115,51 +115,36 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         rdBtnVerduras.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnVerduras.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnVerduras.setText("Preferencia 3");
-        rdBtnVerduras.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdBtnVerdurasActionPerformed(evt);
-            }
-        });
         panelEditarPreferencias.add(rdBtnVerduras);
-        rdBtnVerduras.setBounds(100, 230, 250, 27);
+        rdBtnVerduras.setBounds(100, 230, 250, 31);
 
         rdBtnHarinas.setBackground(new java.awt.Color(51, 51, 51));
         rdBtnHarinas.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnHarinas.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnHarinas.setText("Preferencia 5");
-        rdBtnHarinas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdBtnHarinasActionPerformed(evt);
-            }
-        });
         panelEditarPreferencias.add(rdBtnHarinas);
-        rdBtnHarinas.setBounds(100, 310, 200, 27);
+        rdBtnHarinas.setBounds(100, 310, 200, 31);
 
         rdBtnFrutas.setBackground(new java.awt.Color(51, 51, 51));
         rdBtnFrutas.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnFrutas.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnFrutas.setText("Preferencia 4");
         panelEditarPreferencias.add(rdBtnFrutas);
-        rdBtnFrutas.setBounds(100, 270, 240, 27);
+        rdBtnFrutas.setBounds(100, 270, 240, 31);
 
         rdBtnCarnesRojas.setBackground(new java.awt.Color(51, 51, 51));
         rdBtnCarnesRojas.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnCarnesRojas.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnCarnesRojas.setText("Preferencia 1");
-        rdBtnCarnesRojas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdBtnCarnesRojasActionPerformed(evt);
-            }
-        });
         panelEditarPreferencias.add(rdBtnCarnesRojas);
-        rdBtnCarnesRojas.setBounds(100, 160, 240, 27);
+        rdBtnCarnesRojas.setBounds(100, 160, 240, 31);
 
         rdBtnCarnesBlancas.setBackground(new java.awt.Color(51, 51, 51));
         rdBtnCarnesBlancas.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         rdBtnCarnesBlancas.setForeground(new java.awt.Color(255, 255, 255));
         rdBtnCarnesBlancas.setText("Preferencia 2");
         panelEditarPreferencias.add(rdBtnCarnesBlancas);
-        rdBtnCarnesBlancas.setBounds(100, 190, 240, 27);
+        rdBtnCarnesBlancas.setBounds(100, 190, 240, 31);
 
         btnEditarPreferencias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoOkEditar.png"))); // NOI18N
         btnEditarPreferencias.setBorderPainted(false);
@@ -200,14 +185,6 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rdBtnHarinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdBtnHarinasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rdBtnHarinasActionPerformed
-
-    private void rdBtnCarnesRojasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdBtnCarnesRojasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rdBtnCarnesRojasActionPerformed
-
     private void btnEditarPreferenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarPreferenciasActionPerformed
         ArrayList<String> preferencias = new ArrayList<>();
         agregarPreferenciasUsuario(preferencias);
@@ -219,10 +196,6 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         this.sistema.guardarDatosSistema();
     }//GEN-LAST:event_formWindowClosing
-
-    private void rdBtnVerdurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdBtnVerdurasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rdBtnVerdurasActionPerformed
 
     void agregarPreferenciasUsuario(ArrayList<String> preferencias) {
         if (this.rdBtnCarnesBlancas.isSelected()) {
@@ -259,11 +232,11 @@ public class VentanaEditarPreferencias extends javax.swing.JDialog {
 
    private void cargarListaPreferencias() {
         Sistema.Preferencias[] listaPreferencias = new Sistema.Preferencias[5];
-        listaPreferencias[0] = Sistema.Preferencias.CarnesBlancas;
-        listaPreferencias[1] = Sistema.Preferencias.CarnesRojas;
-        listaPreferencias[2] = Sistema.Preferencias.Frutas;
-        listaPreferencias[3] = Sistema.Preferencias.Harinas;
-        listaPreferencias[4] = Sistema.Preferencias.Verduras;
+        listaPreferencias[0] = Sistema.Preferencias.CARNESBLANCAS;
+        listaPreferencias[1] = Sistema.Preferencias.CARNESROJAS;
+        listaPreferencias[2] = Sistema.Preferencias.FRUTAS;
+        listaPreferencias[3] = Sistema.Preferencias.HARINAS;
+        listaPreferencias[4] = Sistema.Preferencias.VERDURAS;
         for (int i = 0; i < listaPreferencias.length; i++) {
             if (i == 0) {
                 this.rdBtnCarnesRojas.setText("Carnes Rojas");

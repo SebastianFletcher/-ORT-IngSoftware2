@@ -14,6 +14,10 @@ import javax.swing.ImageIcon;
 
 public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
 
+    private static final String NO_PLANIFICADO = "No planificado";
+    private static final String SELECCIONE  = "Seleccione...";
+    private static final String CAMPO_INCORRECTO  = "/Imagenes/iconoCampoIncorrecto.png";
+    
     private Sistema sistema;
     private String profesionalSeleccionado;
     private boolean existeConversacion;
@@ -312,7 +316,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
                 .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnHome)
                     .addComponent(btnCerrarSistema1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addComponent(btnConsultaConProfesional, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblConsultaConProfesional, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -324,7 +328,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
                 .addComponent(btnIngresarAlimentoIngerido, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblIngresarAlimentoIngerido, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         panelDerecho.setBackground(new java.awt.Color(51, 51, 51));
@@ -399,7 +403,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         lblNohayConsultasTexto3.setForeground(new java.awt.Color(255, 255, 255));
         lblNohayConsultasTexto3.setText("No hay conversaciones creadas");
         panelNoHayConversacionesCreadas.add(lblNohayConsultasTexto3);
-        lblNohayConsultasTexto3.setBounds(80, 350, 646, 77);
+        lblNohayConsultasTexto3.setBounds(80, 350, 634, 77);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoCaraTriste.png"))); // NOI18N
         panelNoHayConversacionesCreadas.add(jLabel2);
@@ -495,7 +499,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         );
 
         panelConsultaConProfesional.add(panelConversacion);
-        panelConversacion.setBounds(264, 48, 526, 647);
+        panelConversacion.setBounds(264, 48, 526, 661);
 
         btnNuevaConversacion.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevaConversacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoNuevoMensaje.png"))); // NOI18N
@@ -527,11 +531,11 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Seleccione al profesional");
         panelConsultaConProfesional.add(jLabel1);
-        jLabel1.setBounds(26, 131, 195, 20);
+        jLabel1.setBounds(26, 131, 190, 21);
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         panelConsultaConProfesional.add(jSeparator1);
-        jSeparator1.setBounds(250, 30, 12, 730);
+        jSeparator1.setBounds(250, 30, 2, 730);
 
         panelDerecho.add(panelConsultaConProfesional, "card3");
 
@@ -586,43 +590,43 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         lblNombreDelPlan.setForeground(new java.awt.Color(255, 255, 255));
         lblNombreDelPlan.setText("nombre del plan");
         panelVerPlanAlimentacion.add(lblNombreDelPlan);
-        lblNombreDelPlan.setBounds(260, 110, 320, 22);
+        lblNombreDelPlan.setBounds(260, 110, 320, 23);
 
         lblAlimentoIngeridoSeleccionado2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado2.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado2.setText("Nombre:");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado2);
-        lblAlimentoIngeridoSeleccionado2.setBounds(150, 110, 100, 22);
+        lblAlimentoIngeridoSeleccionado2.setBounds(150, 110, 100, 23);
 
         lblNombreDelProfesional.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblNombreDelProfesional.setForeground(new java.awt.Color(255, 255, 255));
         lblNombreDelProfesional.setText("nombre del profesional");
         panelVerPlanAlimentacion.add(lblNombreDelProfesional);
-        lblNombreDelProfesional.setBounds(280, 150, 280, 22);
+        lblNombreDelProfesional.setBounds(280, 150, 280, 23);
 
         lblAlimentoIngeridoSeleccionado4.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado4.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado4.setText("Martes");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado4);
-        lblAlimentoIngeridoSeleccionado4.setBounds(220, 250, 130, 22);
+        lblAlimentoIngeridoSeleccionado4.setBounds(220, 250, 130, 23);
 
         lblAlimentoIngeridoSeleccionado5.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado5.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado5.setText("Título del profesional:");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado5);
-        lblAlimentoIngeridoSeleccionado5.setBounds(150, 190, 220, 22);
+        lblAlimentoIngeridoSeleccionado5.setBounds(150, 190, 220, 23);
 
         lblAlimentoIngeridoSeleccionado6.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado6.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado6.setText("Miércoles");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado6);
-        lblAlimentoIngeridoSeleccionado6.setBounds(410, 250, 130, 22);
+        lblAlimentoIngeridoSeleccionado6.setBounds(410, 250, 130, 23);
 
         lblAlimentoIngeridoSeleccionado7.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado7.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado7.setText("Jueves");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado7);
-        lblAlimentoIngeridoSeleccionado7.setBounds(590, 250, 130, 22);
+        lblAlimentoIngeridoSeleccionado7.setBounds(590, 250, 130, 23);
 
         lblAlimentoIngeridoSeleccionado8.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado8.setForeground(new java.awt.Color(255, 255, 255));
@@ -634,13 +638,13 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         lblAlimentoIngeridoSeleccionado9.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado9.setText("Sábado");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado9);
-        lblAlimentoIngeridoSeleccionado9.setBounds(220, 500, 130, 22);
+        lblAlimentoIngeridoSeleccionado9.setBounds(220, 500, 130, 23);
 
         lblAlimentoIngeridoSeleccionado10.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado10.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado10.setText("Domingo");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado10);
-        lblAlimentoIngeridoSeleccionado10.setBounds(410, 500, 110, 22);
+        lblAlimentoIngeridoSeleccionado10.setBounds(410, 500, 110, 23);
 
         lblAlimentoIngeridoSeleccionado14.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado14.setForeground(new java.awt.Color(255, 255, 255));
@@ -701,15 +705,15 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         lblAlimentoIngeridoSeleccionado11.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado11.setText("Profesional:");
         panelVerPlanAlimentacion.add(lblAlimentoIngeridoSeleccionado11);
-        lblAlimentoIngeridoSeleccionado11.setBounds(150, 150, 130, 22);
+        lblAlimentoIngeridoSeleccionado11.setBounds(150, 150, 130, 23);
 
         lblTituloDelProfesional.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblTituloDelProfesional.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloDelProfesional.setText("titulo del profesional");
         panelVerPlanAlimentacion.add(lblTituloDelProfesional);
-        lblTituloDelProfesional.setBounds(370, 190, 410, 22);
+        lblTituloDelProfesional.setBounds(370, 190, 410, 23);
         panelVerPlanAlimentacion.add(jSeparator3);
-        jSeparator3.setBounds(30, 230, 720, 10);
+        jSeparator3.setBounds(30, 230, 720, 2);
 
         panelDerecho.add(panelVerPlanAlimentacion, "card5");
 
@@ -750,24 +754,19 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         lblFechaAlimentoIngerido.setForeground(new java.awt.Color(255, 255, 255));
         lblFechaAlimentoIngerido.setText("Ingrese la fecha de ingesta");
         panelAlimentoIngerido.add(lblFechaAlimentoIngerido);
-        lblFechaAlimentoIngerido.setBounds(100, 270, 250, 22);
+        lblFechaAlimentoIngerido.setBounds(100, 270, 250, 23);
 
         lblAlimentoIngeridoSeleccionado.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblAlimentoIngeridoSeleccionado.setForeground(new java.awt.Color(255, 255, 255));
         lblAlimentoIngeridoSeleccionado.setText("Ingrese el nuevo alimento ");
         panelAlimentoIngerido.add(lblAlimentoIngeridoSeleccionado);
-        lblAlimentoIngeridoSeleccionado.setBounds(100, 190, 624, 22);
+        lblAlimentoIngeridoSeleccionado.setBounds(100, 190, 624, 23);
 
         comboAlimentosEnSistema.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         comboAlimentosEnSistema.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione..." }));
         comboAlimentosEnSistema.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 comboAlimentosEnSistemaItemStateChanged(evt);
-            }
-        });
-        comboAlimentosEnSistema.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboAlimentosEnSistemaActionPerformed(evt);
             }
         });
         panelAlimentoIngerido.add(comboAlimentosEnSistema);
@@ -1059,7 +1058,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         );
 
         panelPlanDeAlimentacion.add(panelSolicitarNuevoPlan);
-        panelSolicitarNuevoPlan.setBounds(35, 246, 396, 535);
+        panelSolicitarNuevoPlan.setBounds(35, 246, 396, 542);
 
         panelBuscarPlan.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -1097,7 +1096,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         );
 
         panelPlanDeAlimentacion.add(panelBuscarPlan);
-        panelBuscarPlan.setBounds(435, 254, 339, 524);
+        panelBuscarPlan.setBounds(435, 254, 339, 526);
 
         btnVerPlanesExistentes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoVerPlanesAlimentacion.png"))); // NOI18N
         btnVerPlanesExistentes.setBorderPainted(false);
@@ -1225,7 +1224,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
             ArrayList<Alimento> lstAlimentos = this.sistema.getListaAlimentos();
             DefaultComboBoxModel modelo = new DefaultComboBoxModel();
             this.comboAlimentosEnSistema.setModel(modelo);
-            this.comboAlimentosEnSistema.addItem("Seleccione...");
+            this.comboAlimentosEnSistema.addItem(SELECCIONE);
             for (int i = 0; i < lstAlimentos.size(); i++) {
                 this.comboAlimentosEnSistema.addItem(lstAlimentos.get(i).toString());
             }
@@ -1277,9 +1276,9 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         ArrayList<Ingesta> listaIngestasDelUsuario = usuarioLogueado.getAlimentosIngeridos();
         String fechaIngesta = this.fechaIngestaUsuario.getText();
         String nuevoAlimento = this.comboAlimentosEnSistema.getSelectedItem().toString();
-        if (nuevoAlimento.equals("Seleccione...")) {
+        if (nuevoAlimento.equals(SELECCIONE)) {
             this.lblDatosIncorrectos2.setVisible(true);
-            this.lblValidarNuevoAlimento.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png")));
+            this.lblValidarNuevoAlimento.setIcon(new ImageIcon(getClass().getResource(CAMPO_INCORRECTO)));
             this.lblValidarNuevoAlimento.setVisible(true);
             this.lblNuevoAlimentoVacio.setVisible(true);
         } else {
@@ -1319,7 +1318,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         ArrayList<Profesional> lstProfesionales = this.sistema.getListaProfesionales();
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
         this.comboProfesionalesEnSistema.setModel(modelo);
-        this.comboProfesionalesEnSistema.addItem("Seleccione...");
+        this.comboProfesionalesEnSistema.addItem(SELECCIONE);
         for (int i = 0; i < lstProfesionales.size(); i++) {
             this.comboProfesionalesEnSistema.addItem(lstProfesionales.get(i).toString());
         }
@@ -1346,7 +1345,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
 
     private void btnAceptarSolicitudPlanAlimentacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarSolicitudPlanAlimentacionActionPerformed
         String nombreProfesionalElegido = (String) this.comboProfesionalesEnSistema.getSelectedItem();
-        if (nombreProfesionalElegido.equals("Seleccione...")) {
+        if (nombreProfesionalElegido.equals(SELECCIONE)) {
             this.lblDatosIncorrectos1.setVisible(true);
         } else {
             this.lblDatosIncorrectos1.setVisible(false);
@@ -1367,11 +1366,8 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
     private void comboProfesionalesEnSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboProfesionalesEnSistemaActionPerformed
         if (!this.primeraVez) {
             String profesionalElegido = (String) this.comboProfesionalesEnSistema.getSelectedItem();
-            if (profesionalElegido.equals("Seleccione...")) {
-                this.lblValidarProfesionalPlan.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png")));
-                this.lblValidarProfesionalPlan.setVisible(true);
-            } else {
-                this.lblValidarProfesionalPlan.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoCorrecto.png")));
+            if (profesionalElegido.equals(SELECCIONE)) {
+                this.lblValidarProfesionalPlan.setIcon(new ImageIcon(getClass().getResource(CAMPO_INCORRECTO)));
                 this.lblValidarProfesionalPlan.setVisible(true);
             }
         }
@@ -1398,12 +1394,12 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
     private void comboAlimentosEnSistemaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboAlimentosEnSistemaItemStateChanged
         if (!this.primeraIngesta) {
             String alimentoIngresado = (String) this.comboAlimentosEnSistema.getSelectedItem();
-            if (alimentoIngresado.equals("Seleccione...")) {
-                this.lblValidarNuevoAlimento.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png")));
+            if (alimentoIngresado.equals(SELECCIONE)) {
+                this.lblValidarNuevoAlimento.setIcon(new ImageIcon(getClass().getResource(CAMPO_INCORRECTO)));
                 this.lblValidarNuevoAlimento.setVisible(true);
                 this.lblNuevoAlimentoVacio.setVisible(true);
             } else {
-                this.lblValidarNuevoAlimento.setIcon(new ImageIcon(getClass().getResource("/Imagenes/iconoCampoCorrecto.png")));
+                this.lblValidarNuevoAlimento.setIcon(new ImageIcon(getClass().getResource(CAMPO_INCORRECTO)));
                 this.lblValidarNuevoAlimento.setVisible(true);
                 this.lblNuevoAlimentoVacio.setVisible(false);
             }
@@ -1429,10 +1425,6 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         this.sistema.guardarDatosSistema();
         this.dispose();
     }//GEN-LAST:event_btnCerrarSistema1ActionPerformed
-
-    private void comboAlimentosEnSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboAlimentosEnSistemaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboAlimentosEnSistemaActionPerformed
 
     private void ocultarPaneles() {
         this.btnConsultaConProfesional.setEnabled(true);
@@ -1588,19 +1580,19 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
     private String cargarDatosDelPlan(String[][] planDiaADia, int indiceDia) {
         String actual = "DESAYUNO:" + "\n";
         if (planDiaADia[indiceDia][0] == null || planDiaADia[indiceDia][0].isEmpty()) {
-            actual += "\n" + "No planificado";
+            actual += "\n" + NO_PLANIFICADO;
         } else {
             actual += "\n" + planDiaADia[indiceDia][0];
         }
         actual += "\n" + "\n" + "ALMUERZO:" + "\n";
         if (planDiaADia[indiceDia][1] == null || planDiaADia[indiceDia][1].isEmpty()) {
-            actual += "\n" + "No planificado";
+            actual += "\n" + NO_PLANIFICADO;
         } else {
             actual += "\n" + planDiaADia[indiceDia][1];
         }
         actual += "\n" + "\n" + "CENA:" + "\n";
         if (planDiaADia[indiceDia][2] == null || planDiaADia[indiceDia][2].isEmpty()) {
-            actual += "\n" + "No planificado";
+            actual += "\n" + NO_PLANIFICADO;
         } else {
             actual += "\n" + planDiaADia[indiceDia][2];
         }

@@ -5,10 +5,13 @@ import javax.swing.ImageIcon;
 
 public abstract class Persona implements Serializable {
 
+    private static final String NULL_APELLIDO = "Apellido no ingresado";
+    private static final String NULL_NOMBRE = "Nombre no ingresado";
+    
     private String nombre;
     private String apellido;
     private String fechaNacimiento;
-    public ImageIcon fotoDePerfil;
+    private ImageIcon fotoDePerfil;
 
     public String getNombre() {
         return this.nombre;
@@ -24,7 +27,7 @@ public abstract class Persona implements Serializable {
 
     public void setApellido(String unApellido) {
         if (unApellido == null || unApellido.isEmpty()) {
-            this.apellido = "Apellido no ingresado";
+            this.apellido = NULL_APELLIDO;
         } else {
             this.apellido = unApellido;
         }
@@ -56,11 +59,11 @@ public abstract class Persona implements Serializable {
 
     public String getNombreCompleto() {
         String retorno;
-        if (getNombre().equals("Nombre no ingresado") && getApellido().equals("Apellido no ingresado")) {
-            retorno = "Nombre no ingresado";
-        } else if (getNombre().equals("Nombre no ingresado")) {
+        if (getNombre().equals(NULL_NOMBRE) && getApellido().equals(NULL_APELLIDO)) {
+            retorno = NULL_NOMBRE;
+        } else if (getNombre().equals(NULL_NOMBRE)) {
             retorno = getApellido();
-        } else if (getApellido().equals("Apellido no ingresado")) {
+        } else if (getApellido().equals(NULL_APELLIDO)) {
             retorno = getNombre();
         } else {
             retorno = getNombre() + " " + getApellido();

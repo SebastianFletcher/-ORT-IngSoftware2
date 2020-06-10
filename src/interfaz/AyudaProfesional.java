@@ -59,7 +59,7 @@ public class AyudaProfesional extends javax.swing.JDialog {
         lblNombreUsuario.setForeground(new java.awt.Color(255, 255, 255));
         lblNombreUsuario.setText("Ayuda");
         jPanel1.add(lblNombreUsuario);
-        lblNombreUsuario.setBounds(203, 27, 192, 66);
+        lblNombreUsuario.setBounds(203, 27, 192, 70);
 
         btnIngresarAlimentoIngerido.setForeground(new java.awt.Color(255, 255, 255));
         btnIngresarAlimentoIngerido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_Message_70px.png"))); // NOI18N
@@ -67,11 +67,6 @@ public class AyudaProfesional extends javax.swing.JDialog {
         btnIngresarAlimentoIngerido.setBorderPainted(false);
         btnIngresarAlimentoIngerido.setContentAreaFilled(false);
         btnIngresarAlimentoIngerido.setFocusPainted(false);
-        btnIngresarAlimentoIngerido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIngresarAlimentoIngeridoActionPerformed(evt);
-            }
-        });
         jPanel1.add(btnIngresarAlimentoIngerido);
         btnIngresarAlimentoIngerido.setBounds(40, 150, 143, 129);
 
@@ -81,11 +76,6 @@ public class AyudaProfesional extends javax.swing.JDialog {
         btnIngresarAlimentoIngerido1.setBorderPainted(false);
         btnIngresarAlimentoIngerido1.setContentAreaFilled(false);
         btnIngresarAlimentoIngerido1.setFocusPainted(false);
-        btnIngresarAlimentoIngerido1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIngresarAlimentoIngerido1ActionPerformed(evt);
-            }
-        });
         jPanel1.add(btnIngresarAlimentoIngerido1);
         btnIngresarAlimentoIngerido1.setBounds(40, 430, 143, 119);
 
@@ -95,11 +85,6 @@ public class AyudaProfesional extends javax.swing.JDialog {
         btnIngresarAlimentoIngerido2.setBorderPainted(false);
         btnIngresarAlimentoIngerido2.setContentAreaFilled(false);
         btnIngresarAlimentoIngerido2.setFocusPainted(false);
-        btnIngresarAlimentoIngerido2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIngresarAlimentoIngerido2ActionPerformed(evt);
-            }
-        });
         jPanel1.add(btnIngresarAlimentoIngerido2);
         btnIngresarAlimentoIngerido2.setBounds(40, 290, 143, 129);
 
@@ -112,7 +97,7 @@ public class AyudaProfesional extends javax.swing.JDialog {
         jScrollPane15.setViewportView(textDesayuno3);
 
         jPanel1.add(jScrollPane15);
-        jScrollPane15.setBounds(220, 310, 315, 50);
+        jScrollPane15.setBounds(220, 310, 315, 56);
 
         textDesayuno4.setEditable(false);
         textDesayuno4.setBackground(new java.awt.Color(51, 51, 51));
@@ -123,7 +108,7 @@ public class AyudaProfesional extends javax.swing.JDialog {
         jScrollPane16.setViewportView(textDesayuno4);
 
         jPanel1.add(jScrollPane16);
-        jScrollPane16.setBounds(220, 450, 315, 73);
+        jScrollPane16.setBounds(220, 450, 315, 81);
 
         textDesayuno5.setEditable(false);
         textDesayuno5.setBackground(new java.awt.Color(51, 51, 51));
@@ -134,25 +119,13 @@ public class AyudaProfesional extends javax.swing.JDialog {
         jScrollPane17.setViewportView(textDesayuno5);
 
         jPanel1.add(jScrollPane17);
-        jScrollPane17.setBounds(220, 170, 315, 73);
+        jScrollPane17.setBounds(220, 170, 315, 81);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 600, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnIngresarAlimentoIngeridoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarAlimentoIngeridoActionPerformed
-       
-    }//GEN-LAST:event_btnIngresarAlimentoIngeridoActionPerformed
-
-    private void btnIngresarAlimentoIngerido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarAlimentoIngerido1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnIngresarAlimentoIngerido1ActionPerformed
-
-    private void btnIngresarAlimentoIngerido2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarAlimentoIngerido2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnIngresarAlimentoIngerido2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
