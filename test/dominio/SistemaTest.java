@@ -425,125 +425,125 @@ public class SistemaTest {
 
     @Test
     public void testEnumPreferenciasCarnesBlancas() {
-        String resultadoEsperado = "CarnesBlancas";
-        assertEquals(Preferencias.CarnesBlancas.name(), resultadoEsperado);
+        String resultadoEsperado = "CARNESBLANCAS";
+        assertEquals(Preferencias.CARNESBLANCAS.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumPreferenciasCarnesRojas() {
-        String resultadoEsperado = "CarnesRojas";
-        assertEquals(Preferencias.CarnesRojas.name(), resultadoEsperado);
+        String resultadoEsperado = "CARNESROJAS";
+        assertEquals(Preferencias.CARNESROJAS.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumPreferenciasVerduras() {
-        String resultadoEsperado = "Verduras";
-        assertEquals(Preferencias.Verduras.name(), resultadoEsperado);
+        String resultadoEsperado = "VERDURAS";
+        assertEquals(Preferencias.VERDURAS.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumPreferenciasFrutas() {
-        String resultadoEsperado = "Frutas";
-        assertEquals(Preferencias.Frutas.name(), resultadoEsperado);
+        String resultadoEsperado = "FRUTAS";
+        assertEquals(Preferencias.FRUTAS.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumPreferenciasHarinas() {
-        String resultadoEsperado = "Harinas";
-        assertEquals(Preferencias.Harinas.name(), resultadoEsperado);
+        String resultadoEsperado = "HARINAS";
+        assertEquals(Preferencias.HARINAS.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumRestriccionesDiabetes() {
-        String resultadoEsperado = "Diabetes";
-        assertEquals(Restricciones.Diabetes.name(), resultadoEsperado);
+        String resultadoEsperado = "DIABETES";
+        assertEquals(Restricciones.DIABETES.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumRestriccionesVeganismo() {
-        String resultadoEsperado = "Veganismo";
-        assertEquals(Restricciones.Veganismo.name(), resultadoEsperado);
+        String resultadoEsperado = "VEGANISMO";
+        assertEquals(Restricciones.VEGANISMO.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumRestriccionesIntoleranciaLactosa() {
-        String resultadoEsperado = "IntoleranciaLactosa";
-        assertEquals(Restricciones.IntoleranciaLactosa.name(), resultadoEsperado);
+        String resultadoEsperado = "INTOLERANCIALACTOSA";
+        assertEquals(Restricciones.INTOLERANCIALACTOSA.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumRestriccionesHarinas() {
-        String resultadoEsperado = "Celiaquia";
-        assertEquals(Restricciones.Celiaquia.name(), resultadoEsperado);
+        String resultadoEsperado = "CELIAQUIA";
+        assertEquals(Restricciones.CELIAQUIA.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumDiasSemanaJueves() {
-        String resultadoEsperado = "Jueves";
-        assertEquals(DiasDeLaSemana.Jueves.name(), resultadoEsperado);
+        String resultadoEsperado = "JUEVES";
+        assertEquals(DiasDeLaSemana.JUEVES.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumDiasSemanaViernes() {
-        String resultadoEsperado = "Viernes";
-        assertEquals(DiasDeLaSemana.Viernes.name(), resultadoEsperado);
+        String resultadoEsperado = "VIERNES";
+        assertEquals(DiasDeLaSemana.VIERNES.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumDiasSemanaSabado() {
-        String resultadoEsperado = "Sabado";
-        assertEquals(DiasDeLaSemana.Sabado.name(), resultadoEsperado);
+        String resultadoEsperado = "SABADO";
+        assertEquals(DiasDeLaSemana.SABADO.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumDiasSemanaDomingo() {
-        String resultadoEsperado = "Domingo";
-        assertEquals(DiasDeLaSemana.Domingo.name(), resultadoEsperado);
+        String resultadoEsperado = "DOMINGO";
+        assertEquals(DiasDeLaSemana.DOMINGO.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumDiasSemanaMiercoles() {
-        String resultadoEsperado = "Miercoles";
-        assertEquals(DiasDeLaSemana.Miercoles.name(), resultadoEsperado);
+        String resultadoEsperado = "MIERCOLES";
+        assertEquals(DiasDeLaSemana.MIERCOLES.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumDiasSemanaMartes() {
-        String resultadoEsperado = "Martes";
-        assertEquals(DiasDeLaSemana.Martes.name(), resultadoEsperado);
+        String resultadoEsperado = "MARTES";
+        assertEquals(DiasDeLaSemana.MARTES.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumDiasSemanaLunes() {
-        String resultadoEsperado = "Lunes";
-        assertEquals(DiasDeLaSemana.Lunes.name(), resultadoEsperado);
+        String resultadoEsperado = "LUNES";
+        assertEquals(DiasDeLaSemana.LUNES.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumIngestasDiaDesayuno() {
-        String resultadoEsperado = "Desayuno";
-        assertEquals(IngestasPorDia.Desayuno.name(), resultadoEsperado);
+        String resultadoEsperado = "DESAYUNO";
+        assertEquals(IngestasPorDia.DESAYUNO.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumIngestasDiaAlmuerzo() {
-        String resultadoEsperado = "Almuerzo";
-        assertEquals(IngestasPorDia.Almuerzo.name(), resultadoEsperado);
+        String resultadoEsperado = "ALMUERZO";
+        assertEquals(IngestasPorDia.ALMUERZO.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumIngestasDiaCena() {
-        String resultadoEsperado = "Cena";
-        assertEquals(IngestasPorDia.Cena.name(), resultadoEsperado);
+        String resultadoEsperado = "CENA";
+        assertEquals(IngestasPorDia.CENA.name(), resultadoEsperado);
     }
 
     @Test
     public void testEnumDevolverListaIngestas() {
         Sistema sistemaATestear = new Sistema();
         ArrayList<String> listaEsperada = new ArrayList<>();
-        listaEsperada.add("Desayuno");
-        listaEsperada.add("Almuerzo");
-        listaEsperada.add("Cena");
+        listaEsperada.add("DESAYUNO");
+        listaEsperada.add("ALMUERZO");
+        listaEsperada.add("CENA");
         assertEquals(sistemaATestear.devolverListaIngestasDeLaSemana(), listaEsperada);
     }
 
@@ -552,13 +552,13 @@ public class SistemaTest {
     public void testEnumDevolverListaDiasDeLaSemana() {
         Sistema sistemaATestear = new Sistema();
         ArrayList<String> listaEsperada = new ArrayList<>();
-        listaEsperada.add("Lunes");
-        listaEsperada.add("Martes");
-        listaEsperada.add("Miercoles");
-        listaEsperada.add("Jueves");
-        listaEsperada.add("Viernes");
-        listaEsperada.add("Sabado");
-        listaEsperada.add("Domingo");
+        listaEsperada.add("LUNES");
+        listaEsperada.add("MARTES");
+        listaEsperada.add("MIERCOLES");
+        listaEsperada.add("JUEVES");
+        listaEsperada.add("VIERNES");
+        listaEsperada.add("SABADO");
+        listaEsperada.add("DOMINGO");
         assertEquals(sistemaATestear.devolverListaDiasDeLaSemana(), listaEsperada);
     }
 
