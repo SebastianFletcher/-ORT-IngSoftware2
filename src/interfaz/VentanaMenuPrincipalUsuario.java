@@ -353,23 +353,23 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         panelNoHayAlimentosLayout.setHorizontalGroup(
             panelNoHayAlimentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelNoHayAlimentosLayout.createSequentialGroup()
-                .addContainerGap(428, Short.MAX_VALUE)
                 .addGroup(panelNoHayAlimentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelNoHayAlimentosLayout.createSequentialGroup()
-                        .addComponent(lblNohayConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(115, 115, 115))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelNoHayAlimentosLayout.createSequentialGroup()
-                        .addComponent(lblNohayConsultasTexto)
-                        .addContainerGap())))
+                    .addGroup(panelNoHayAlimentosLayout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(lblNohayConsultasTexto))
+                    .addGroup(panelNoHayAlimentosLayout.createSequentialGroup()
+                        .addGap(279, 279, 279)
+                        .addComponent(lblNohayConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
         panelNoHayAlimentosLayout.setVerticalGroup(
             panelNoHayAlimentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelNoHayAlimentosLayout.createSequentialGroup()
-                .addGap(266, 266, 266)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelNoHayAlimentosLayout.createSequentialGroup()
+                .addContainerGap(246, Short.MAX_VALUE)
                 .addComponent(lblNohayConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblNohayConsultasTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(327, Short.MAX_VALUE))
+                .addGap(347, 347, 347))
         );
 
         panelDerecho.add(panelNoHayAlimentos, "card2");
@@ -383,7 +383,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         lblCrearConv.setForeground(new java.awt.Color(255, 255, 255));
         lblCrearConv.setText("Crear");
         panelNoHayConversacionesCreadas.add(lblCrearConv);
-        lblCrearConv.setBounds(270, 430, 120, 77);
+        lblCrearConv.setBounds(230, 470, 120, 77);
 
         btnNuevaConversacion1.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevaConversacion1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoNuevoMensaje.png"))); // NOI18N
@@ -397,7 +397,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
             }
         });
         panelNoHayConversacionesCreadas.add(btnNuevaConversacion1);
-        btnNuevaConversacion1.setBounds(390, 440, 93, 60);
+        btnNuevaConversacion1.setBounds(210, 480, 330, 60);
 
         lblNohayConsultasTexto3.setFont(new java.awt.Font("Century Gothic", 1, 40)); // NOI18N
         lblNohayConsultasTexto3.setForeground(new java.awt.Color(255, 255, 255));
@@ -770,7 +770,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
             }
         });
         panelAlimentoIngerido.add(comboAlimentosEnSistema);
-        comboAlimentosEnSistema.setBounds(100, 220, 310, 41);
+        comboAlimentosEnSistema.setBounds(100, 220, 300, 41);
 
         lblNuevoAlimentoIngerido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoNuevoAlimento.png"))); // NOI18N
         panelAlimentoIngerido.add(lblNuevoAlimentoIngerido);
@@ -864,7 +864,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         );
 
         panelPlanDeAlimentacion.add(panelNoHayPlanesDisponibles);
-        panelNoHayPlanesDisponibles.setBounds(410, 240, 320, 500);
+        panelNoHayPlanesDisponibles.setBounds(440, 240, 330, 500);
 
         panelPlanSolicitadoCorrectamente.setBackground(new java.awt.Color(51, 51, 51));
         panelPlanSolicitadoCorrectamente.setMaximumSize(new java.awt.Dimension(390, 500));
@@ -1175,9 +1175,9 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
         this.btnConsultaConProfesional.setEnabled(false);
         if (sistema.getListaProfesionales().size() > 0) {
             this.listaConversaciones.setSelectedIndex(0);
-            String[] lista = sistema.getListaNombresProfesionalesConversaciones(sistema.getPersonaLogueada().getNombreCompleto());
-            if (lista.length > 0) {
-                this.listaConversaciones.setListData(lista);
+            ArrayList<String> lista = sistema.getListaNombresProfesionalesConversaciones(sistema.getPersonaLogueada().getNombreCompleto());
+            if (lista.size() > 0) {
+                this.listaConversaciones.setListData( lista.stream().toArray(String[]::new) );
                 this.existeConversacion = true;
                 this.panelConsultaConProfesional.setVisible(true);
             } else {
@@ -1408,7 +1408,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
 
     private void btnNuevaConversacion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaConversacion1ActionPerformed
         ArrayList listaNombresProfesionalesSinConversacion;
-        listaNombresProfesionalesSinConversacion = this.sistema.getNombresProfesionalesSinConversacionConUsuario((sistema.getPersonaLogueada()));
+        listaNombresProfesionalesSinConversacion = this.sistema.getNombresProfesionalesSinConversacionConUsuario(sistema.getPersonaLogueada());
         if (listaNombresProfesionalesSinConversacion != null && listaNombresProfesionalesSinConversacion.size() > 0) {
             ocultarPaneles();
             this.listaElegirProfesionales.setListData(listaNombresProfesionalesSinConversacion.toArray());
@@ -1458,7 +1458,7 @@ public class VentanaMenuPrincipalUsuario extends javax.swing.JDialog {
             this.lblNombreProfesional.setText(this.profesionalSeleccionado);
             Profesional profesional = this.sistema.getProfesionalPorNombre(this.profesionalSeleccionado);
             this.lblFotoProfesional.setIcon(profesional.getFotoDePerfil());
-            this.listaConversaciones.setListData(this.sistema.getListaNombresProfesionalesConversaciones(remitente));
+            this.listaConversaciones.setListData(this.sistema.getListaNombresProfesionalesConversaciones(remitente).stream().toArray(String[]::new));
         }
     }
 

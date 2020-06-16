@@ -114,32 +114,32 @@ public final class Sistema implements Serializable {
 
     public ArrayList<String> devolverListaPaises() {
         ArrayList<String> lstNacionalidades = new ArrayList<>();
-        lstNacionalidades.add(Paises.ARGENTINA.toString());
-        lstNacionalidades.add(Paises.BOLIVIA.toString());
-        lstNacionalidades.add(Paises.BRASIL.toString());
-        lstNacionalidades.add(Paises.CHILE.toString());
-        lstNacionalidades.add(Paises.COLOMBIA.toString());
+        lstNacionalidades.add("Argentina");
+        lstNacionalidades.add("Bolivia");
+        lstNacionalidades.add("Brasil");
+        lstNacionalidades.add("Chile");
+        lstNacionalidades.add("Colombia");
         lstNacionalidades.add("Costa Rica");
-        lstNacionalidades.add(Paises.CUBA.toString());
-        lstNacionalidades.add(Paises.ECUADOR.toString());
+        lstNacionalidades.add("Cuba");
+        lstNacionalidades.add("Ecuador");
         lstNacionalidades.add("El Salvador");
         lstNacionalidades.add("Guayana Francesa");
-        lstNacionalidades.add(Paises.GRANADA.toString());
-        lstNacionalidades.add(Paises.GUATEMALA.toString());
-        lstNacionalidades.add(Paises.GUAYANA.toString());
-        lstNacionalidades.add(Paises.HAITI.toString());
-        lstNacionalidades.add(Paises.HONDURAS.toString());
-        lstNacionalidades.add(Paises.JAMAICA.toString());
-        lstNacionalidades.add(Paises.MEXICO.toString());
-        lstNacionalidades.add(Paises.NICARAGUA.toString());
-        lstNacionalidades.add(Paises.PARAGUAY.toString());
-        lstNacionalidades.add(Paises.PANAMA.toString());
-        lstNacionalidades.add(Paises.PERU.toString());
+        lstNacionalidades.add("Granada");
+        lstNacionalidades.add("Guatemala");
+        lstNacionalidades.add("Guayana");
+        lstNacionalidades.add("Haiti");
+        lstNacionalidades.add("Honduras");
+        lstNacionalidades.add("Jamaica");
+        lstNacionalidades.add("Mexico");
+        lstNacionalidades.add("Nicaragua");
+        lstNacionalidades.add("Paraguay");
+        lstNacionalidades.add("Panama");
+        lstNacionalidades.add("Peru");
         lstNacionalidades.add("Puerto Rico");
         lstNacionalidades.add("República Dominicana");
-        lstNacionalidades.add(Paises.SURINAM.toString());
-        lstNacionalidades.add(Paises.URUGUAY.toString());
-        lstNacionalidades.add(Paises.VENEZUELA.toString());
+        lstNacionalidades.add("Surinam");
+        lstNacionalidades.add("Uruguay");
+        lstNacionalidades.add("Venezuela");
         return lstNacionalidades;
     }
 
@@ -244,18 +244,16 @@ public final class Sistema implements Serializable {
         return fueAgregadaConversacion;
     }
 
-    public String[] getListaNombresProfesionalesConversaciones(String nombreUsuarioConversacion) {
-        String[] nombresProfesionales = new String[getListaConversaciones().size()];
+    public ArrayList<String> getListaNombresProfesionalesConversaciones(String nombreUsuarioConversacion) {
         ArrayList<String> nombresIngresados = new ArrayList<>();
         for (int i = 1; i < getListaConversaciones().size(); i++) {
             String nombreCompleto = getListaConversaciones().get(i).getProfesional().getNombreCompleto();
             String nombreUsuarioCompleto = getListaConversaciones().get(i).getUsuario().getNombreCompleto();
             if (!nombresIngresados.contains(nombreCompleto) && nombreUsuarioCompleto.equals(nombreUsuarioConversacion)) {
-                nombresProfesionales[i] = nombreCompleto;
                 nombresIngresados.add(nombreCompleto);
             }
         }
-        return nombresProfesionales;
+        return nombresIngresados;
     }
 
     public String[] getListaNombresUsuariosConversacionesPendientes(String profesional) {
@@ -480,12 +478,6 @@ public final class Sistema implements Serializable {
 
     public enum Restricciones {
         DIABETES, VEGANISMO, INTOLERANCIALACTOSA, CELIAQUIA;
-    }
-
-    public enum Paises {
-        ARGENTINA, BOLIVIA, BRASIL, CHILE, COLOMBIA, COSTARICA, CUBA, ECUADOR, ELSALVADOR,
-        GUAYANAFRANCESA, GRANADA, GUATEMALA, GUAYANA, HAITI, HONDURAS, JAMAICA,
-        MEXICO, NICARAGUA, PARAGUAY, PANAMA, PERU, PUERTORICO, REPUBLICADOMINICANA, SURINAM, URUGUAY, VENEZUELA;
     }
 
     public enum DiasDeLaSemana {

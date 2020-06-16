@@ -186,7 +186,7 @@ public class VentanaRegistrarProfesional extends javax.swing.JDialog {
             }
         });
         panel2.add(txtNombre);
-        txtNombre.setBounds(220, 180, 210, 38);
+        txtNombre.setBounds(240, 190, 210, 30);
 
         txtApellido.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
         txtApellido.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -196,7 +196,7 @@ public class VentanaRegistrarProfesional extends javax.swing.JDialog {
             }
         });
         panel2.add(txtApellido);
-        txtApellido.setBounds(220, 240, 210, 33);
+        txtApellido.setBounds(240, 240, 210, 30);
 
         lblTituloProfesional.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblTituloProfesional.setForeground(new java.awt.Color(255, 255, 255));
@@ -229,7 +229,7 @@ public class VentanaRegistrarProfesional extends javax.swing.JDialog {
             }
         });
         panel2.add(listaPaisGraduacion);
-        listaPaisGraduacion.setBounds(220, 480, 220, 29);
+        listaPaisGraduacion.setBounds(240, 480, 210, 30);
 
         listaTituloProfesional.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         listaTituloProfesional.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Ciencia de los alimentos", "Entrenador físico e instructor aeróbico", "Ingeniería en alimentos", "Licenciatura en nutrición", "Maestro de salud y educación física", "Medicina", "Nutrición Humana y Dietética", "Nutricionista", "Técnicatura en Gestión Gastronómica", "Técnicatura en tecnología de alimentos", "Técnico operador de alimentos", "Otro..." }));
@@ -239,19 +239,19 @@ public class VentanaRegistrarProfesional extends javax.swing.JDialog {
             }
         });
         panel2.add(listaTituloProfesional);
-        listaTituloProfesional.setBounds(220, 357, 220, 30);
+        listaTituloProfesional.setBounds(240, 360, 210, 30);
 
         lblFechaNac.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblFechaNac.setForeground(new java.awt.Color(255, 255, 255));
         lblFechaNac.setText("Fecha de nacimiento");
         panel2.add(lblFechaNac);
-        lblFechaNac.setBounds(30, 300, 180, 23);
+        lblFechaNac.setBounds(30, 300, 220, 23);
 
         dateChooserFechaNacimiento.setFieldFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 18));
         dateChooserFechaNacimiento.setMaxDate(new java.util.GregorianCalendar(2017, 10, 9));
         dateChooserFechaNacimiento.setMinDate(new java.util.GregorianCalendar(1917, 10, 1));
         panel2.add(dateChooserFechaNacimiento);
-        dateChooserFechaNacimiento.setBounds(220, 298, 210, 30);
+        dateChooserFechaNacimiento.setBounds(240, 300, 210, 30);
 
         btnIngresarFotoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregarFotoUsuario.png"))); // NOI18N
         btnIngresarFotoPerfil.setBorderPainted(false);
@@ -262,39 +262,39 @@ public class VentanaRegistrarProfesional extends javax.swing.JDialog {
             }
         });
         panel2.add(btnIngresarFotoPerfil);
-        btnIngresarFotoPerfil.setBounds(579, 163, 158, 102);
+        btnIngresarFotoPerfil.setBounds(620, 160, 158, 102);
 
         lblFechaGraduacion.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         lblFechaGraduacion.setForeground(new java.awt.Color(255, 255, 255));
         lblFechaGraduacion.setText("Fecha de graduación");
         panel2.add(lblFechaGraduacion);
-        lblFechaGraduacion.setBounds(30, 410, 190, 36);
+        lblFechaGraduacion.setBounds(30, 410, 210, 36);
 
         dateChooserFechaGraduacion.setFieldFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 18));
         dateChooserFechaGraduacion.setMaxDate(new java.util.GregorianCalendar(2017, 10, 9));
         dateChooserFechaGraduacion.setMinDate(new java.util.GregorianCalendar(1917, 10, 1));
         panel2.add(dateChooserFechaGraduacion);
-        dateChooserFechaGraduacion.setBounds(220, 417, 210, 30);
+        dateChooserFechaGraduacion.setBounds(240, 420, 210, 30);
 
         lblValidarNombre.setForeground(new java.awt.Color(255, 255, 255));
         lblValidarNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png"))); // NOI18N
         panel2.add(lblValidarNombre);
-        lblValidarNombre.setBounds(450, 180, 32, 44);
+        lblValidarNombre.setBounds(460, 180, 32, 44);
 
         lblValidarApellido.setForeground(new java.awt.Color(255, 255, 255));
         lblValidarApellido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png"))); // NOI18N
         panel2.add(lblValidarApellido);
-        lblValidarApellido.setBounds(450, 230, 32, 44);
+        lblValidarApellido.setBounds(460, 230, 32, 44);
 
         lblValidarTituloProfesional.setForeground(new java.awt.Color(255, 255, 255));
         lblValidarTituloProfesional.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png"))); // NOI18N
         panel2.add(lblValidarTituloProfesional);
-        lblValidarTituloProfesional.setBounds(450, 410, 32, 44);
+        lblValidarTituloProfesional.setBounds(460, 410, 32, 44);
 
         lblValidarPaisGraduacion.setForeground(new java.awt.Color(255, 255, 255));
         lblValidarPaisGraduacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoCampoIncorrecto.png"))); // NOI18N
         panel2.add(lblValidarPaisGraduacion);
-        lblValidarPaisGraduacion.setBounds(450, 470, 32, 44);
+        lblValidarPaisGraduacion.setBounds(460, 470, 32, 44);
 
         lblDatosIncorrectos.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
         lblDatosIncorrectos.setForeground(new java.awt.Color(255, 153, 153));
@@ -306,25 +306,25 @@ public class VentanaRegistrarProfesional extends javax.swing.JDialog {
         lblNombreVacio.setForeground(new java.awt.Color(240, 128, 128));
         lblNombreVacio.setText("Dato vacío");
         panel2.add(lblNombreVacio);
-        lblNombreVacio.setBounds(490, 180, 134, 38);
+        lblNombreVacio.setBounds(500, 180, 134, 38);
 
         lblTituloVacio.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
         lblTituloVacio.setForeground(new java.awt.Color(240, 128, 128));
         lblTituloVacio.setText("Dato vacío");
         panel2.add(lblTituloVacio);
-        lblTituloVacio.setBounds(490, 410, 134, 38);
+        lblTituloVacio.setBounds(500, 410, 134, 38);
 
         lblPaisVacio.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
         lblPaisVacio.setForeground(new java.awt.Color(240, 128, 128));
         lblPaisVacio.setText("Dato vacío");
         panel2.add(lblPaisVacio);
-        lblPaisVacio.setBounds(490, 470, 120, 38);
+        lblPaisVacio.setBounds(500, 470, 120, 38);
 
         lblApellidoVacio.setFont(new java.awt.Font("Century Gothic", 0, 19)); // NOI18N
         lblApellidoVacio.setForeground(new java.awt.Color(240, 128, 128));
         lblApellidoVacio.setText("Dato vacío");
         panel2.add(lblApellidoVacio);
-        lblApellidoVacio.setBounds(490, 230, 134, 38);
+        lblApellidoVacio.setBounds(500, 230, 134, 38);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

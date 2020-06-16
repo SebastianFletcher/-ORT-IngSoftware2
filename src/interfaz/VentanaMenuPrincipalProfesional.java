@@ -694,7 +694,7 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         lblComida.setForeground(new java.awt.Color(255, 255, 255));
         lblComida.setText("Comida");
         panelElaborarPlan.add(lblComida);
-        lblComida.setBounds(50, 240, 134, 20);
+        lblComida.setBounds(40, 240, 134, 20);
 
         lblAlimentos.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblAlimentos.setForeground(new java.awt.Color(255, 255, 255));
@@ -740,7 +740,7 @@ public class VentanaMenuPrincipalProfesional extends javax.swing.JDialog {
         lblDia.setForeground(new java.awt.Color(255, 255, 255));
         lblDia.setText("Día");
         panelElaborarPlan.add(lblDia);
-        lblDia.setBounds(50, 180, 134, 20);
+        lblDia.setBounds(40, 170, 134, 20);
 
         lblNombrePlan.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblNombrePlan.setForeground(new java.awt.Color(255, 255, 255));

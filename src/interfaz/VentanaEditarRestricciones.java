@@ -48,8 +48,8 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
         rdBtnIntoleranteLactosa = new javax.swing.JRadioButton();
         lblEditarRestricciones = new javax.swing.JLabel();
         panelListo = new javax.swing.JPanel();
-        lblListo = new javax.swing.JLabel();
         lblIconoListo = new javax.swing.JLabel();
+        lblListo1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(508, 390));
@@ -128,47 +128,52 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
         panelListo.setMinimumSize(new java.awt.Dimension(508, 390));
         panelListo.setPreferredSize(new java.awt.Dimension(508, 390));
 
-        lblListo.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        lblListo.setForeground(new java.awt.Color(255, 255, 255));
-        lblListo.setText("Listo!");
-
         lblIconoListo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconoOK.png"))); // NOI18N
+
+        lblListo1.setFont(new java.awt.Font("Century Gothic", 1, 40)); // NOI18N
+        lblListo1.setForeground(new java.awt.Color(255, 255, 255));
+        lblListo1.setText("Listo!");
 
         javax.swing.GroupLayout panelListoLayout = new javax.swing.GroupLayout(panelListo);
         panelListo.setLayout(panelListoLayout);
         panelListoLayout.setHorizontalGroup(
             panelListoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelListoLayout.createSequentialGroup()
-                .addGap(196, 196, 196)
-                .addComponent(lblIconoListo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelListoLayout.createSequentialGroup()
-                .addContainerGap(135, Short.MAX_VALUE)
-                .addComponent(lblListo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(157, 157, 157))
+                .addGap(174, 174, 174)
+                .addGroup(panelListoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblIconoListo)
+                    .addComponent(lblListo1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         panelListoLayout.setVerticalGroup(
             panelListoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelListoLayout.createSequentialGroup()
-                .addGap(92, 92, 92)
+                .addGap(89, 89, 89)
                 .addComponent(lblIconoListo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblListo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(lblListo1)
+                .addContainerGap(129, Short.MAX_VALUE))
         );
-
-        panelEditarRestricciones.add(panelListo);
-        panelListo.setBounds(40, 30, 432, 352);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelEditarRestricciones, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(panelListo, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelEditarRestricciones, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(panelListo, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -182,8 +187,8 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
         ArrayList<String> restricciones = new ArrayList<>();
         agregarRestriccionesUsuario(restricciones);
         this.usuarioActual.actualizarRestriccionesUsuario(usuarioActual, restricciones);
-        this.panelEditarRestricciones.setVisible(false);
         this.panelListo.setVisible(true);
+        this.panelEditarRestricciones.setVisible(false);
     }//GEN-LAST:event_btnEditarPreferenciasActionPerformed
 
     void agregarRestriccionesUsuario(ArrayList<String> restricciones) {
@@ -227,7 +232,7 @@ public class VentanaEditarRestricciones extends javax.swing.JDialog {
     private javax.swing.JLabel lblEditar;
     private javax.swing.JLabel lblEditarRestricciones;
     private javax.swing.JLabel lblIconoListo;
-    private javax.swing.JLabel lblListo;
+    private javax.swing.JLabel lblListo1;
     private javax.swing.JLabel lblTxtRestricciones;
     private javax.swing.JPanel panelEditarRestricciones;
     private javax.swing.JPanel panelListo;
